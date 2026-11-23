@@ -1,0 +1,614 @@
+{
+ "source": "HubSpot product library snapshot",
+ "capturedAt": "2026-11-23",
+ "products": [
+  {
+   "id": "50533252514",
+   "name": "Custom Template Setup (with custom modules)",
+   "price": 1000.0,
+   "description": "One-time HubSpot Content Hub template setup, available as a standalone service. Includes a website page template with a global header and footer, hero section, and drag-and-drop module areas, a landing page template without navigation, and a thank-you page template based on the landing page. Includes five custom modules: a hero and rich text module styled to match the live website, a CTA banner, a two-column text-and-image module, and a cards module or similar layout. Fonts, colors, buttons, and form styling match the live site. Includes one round of revisions. Requires HubSpot Content Hub.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "49975715959",
+   "name": "Custom Template Setup",
+   "price": 500.0,
+   "description": "Does not include the blog.\n\u2022\tWebsite page template: global header and footer, a hero section, and drag-and-drop areas for adding HubSpot modules.\n\u2022\tLanding page template: the same design without the navigation menu.\n\u2022\tThank-you page template, built from the landing page template.\n\u2022\tBranding (fonts, colors, buttons) taken from the live site.\n\u2022\tForm styling to match.\n\u2022\tOne round of revisions.\nRequires the client to have Content Hub.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "49831708242",
+   "name": "AEO Visibility & Outreach\u00a0Initial strategy and setup",
+   "price": 750.0,
+   "description": "Review AEO prompts and baseline visibility\nVet initial opportunities\nGather approved client positioning and supporting facts.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "49831894178",
+   "name": "AEO Visibility and Outreach (Monthly Service)",
+   "price": 1500.0,
+   "description": "Research and pitch 4 qualified publication opportunities monthly \nUp to two follow-ups per opportunity\nResponse management\nMonthly reporting",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "46767286844",
+   "name": "Website Maintenance Package (Care + Growth Package)",
+   "price": 650.0,
+   "description": "We will make as needed monthly updates on the following: \n\n- Theme, plugin & platform updates as needed \n- Security monitoring & regular backups \n- Content updates & copy swaps (2 requests/month) \n- Minor fixes \u2013 broken links, forms, new images \n- Monthly site health summary \n- Monthly Analytics Report \u2013 traffic, top pages, conversions \n- Quarterly AI-Search (AEO) visibility report \n- Prioritized recommendations each month \n- Quarterly strategy call  \n- Theme, plugin & platform updates as needed \n- Security monitoring & regular backups",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "46160852339",
+   "name": "[Onboarding] Revenue Hub Professional",
+   "price": 3500.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Configuration of standard product information, including: Product name and description, SKU, Unit price, Billing frequency, Term length, Tax category, where applicable, One-time and recurring pricing\n- Complete quote-to-cash process mapping\n- Up to 20 custom revenue properties and record views\n- Configure company details \n- E-signature or click-to-accept configuration\n- Customize up to 2 branded quote templates (logos, colors, terms, footer text) \n- Import/input product library with provided information \n- Product-library design for multiple product families, teams, markets, brands, or business units\n- Up to two supporting workflows\n- Map product properties to deal line items \n- Create discounts or bundled products (if applicable) \n- Review and align currency and tax settings \n- Training \u2013 Up to 4 hour of dedicated training on Revenue Hub",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "45612137359",
+   "name": "Content Marketing Plan",
+   "price": 3000.0,
+   "description": "Content & Digital Presence Audit: Evaluate existing website content, blogs, email marketing, social media, SEO performance, and current content assets to identify strengths, gaps, and opportunities.\n\nAudience, Messaging & Competitive Analysis: Review target audiences, buyer journeys, key messaging, and competitor content strategies to uncover opportunities for differentiation and engagement.\n\nContent Strategy & Campaign Planning: Develop a customized content marketing strategy aligned to business goals, including recommended content themes, channels, campaign ideas, and lead generation opportunities.\n\n90-Day Content Marketing Roadmap: Deliver a prioritized action plan outlining recommended content initiatives, publishing cadence, campaign recommendations, SEO opportunities, and key performance metrics for measuring success.\n\nDeliverables Included:\n- Competitive & Messaging Analysis\n- Recommended Content Pillars/Themes\n- 90-Day Editorial & Campaign Roadmap\n- Strategy Review Meeting",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "45612323174",
+   "name": "AI Visibility Audit",
+   "price": 3000.0,
+   "description": "- AI Visibility Scorecard: Your share of AI voice across five engines, scored and explained.\n- Competitor benchmark: Who AI recommends instead of you, and the signals behind it.\n- Buyer prompt library & answer log: Every question we tested and exactly what each AI engine said.\n- Technical & schema findings: A fix list your web team or developer can act on right away.\n- Prioritized 90-day roadmap: Every recommendation ranked by impact and effort.\n- 60 min live walkthrough + recording: A working session with your team to review findings and next steps.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "42976755891",
+   "name": "[Add-on] Pipeline",
+   "price": 200.0,
+   "description": "",
+   "sku": "1161",
+   "recurring": null
+  },
+  {
+   "id": "42976074636",
+   "name": "[Add on] Data Import",
+   "price": 250.0,
+   "description": "Includes:\n- Imports from the current CRM (Limited to 1 import per primary object - ie. Contacts, Companies, and Opportunities)\n- Data exports to be provided by the client, clean and ready for import\n\n*Data files must be reviewed prior to contract finalization\n** LeadG2 is not responsible for any data cleansing or reformatting prior to import",
+   "sku": "1160",
+   "recurring": null
+  },
+  {
+   "id": "42976817791",
+   "name": "[Add-on] Salesforce Marketplace Native Integration",
+   "price": 1500.0,
+   "description": "Includes: \n- Install the native integration from the HubSpot App Marketplace. \n- Map external system fields to HubSpot standard/custom properties. \n- Configure association logic between objects (Company > Contact > Deal, etc.). \n- Identify and resolve mismatched field types, duplicates, and sync conflicts. \n- Build up to 3 supporting workflows to automate follow-ups, record creation, status updates, or notifications triggered by integration activity. \n- Test bidirectional (if applicable) sync with sample data and confirm end-to-end behavior for key use cases (example: new subscriber \u2192 HubSpot \u2192 nurture sequence).",
+   "sku": "1156.1",
+   "recurring": null
+  },
+  {
+   "id": "42870596780",
+   "name": "[Onboarding] HubSpot for Marketers Enterprise: Elite",
+   "price": 6000.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Outline a lead flow plan (automated notifications, up to 5 basic workflows) \n- Setup of blog template to match brand standards \n- Migration of up to 20 blog posts\n- Setup of up to 3 landing page and thank you page templates to match brand standards \n- Setup of basic lead scoring template\n- Re-creation of up to 10 existing forms (Does not include advanced logic or multi-page forms) \n- Setup of up to 3 email templates (blog subscriptions, campaign promotion, lead nurturing) \n- Social media setup and integration \u2013 including social agent  \n- Creation of up to 20 custom properties for specific marketing needs \n- 1 Marketing Hub reporting dashboard created (up to 5 reports) \n- 1 Content Hub reporting dashboard created (up to 5 reports)\n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1118.3",
+   "recurring": null
+  },
+  {
+   "id": "42869791659",
+   "name": "[Onboarding] HubSpot for Marketers Enterprise: Standard",
+   "price": 5000.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Outline a lead flow plan (automated notifications, up to 5 basic workflows) \n- Setup of blog template to match brand standards \n- Migration of up to 20 blog posts\n- Setup of up to 3 landing page and thank you page templates to match brand standards \n- Setup of basic lead scoring template\n- Re-creation of up to 10 existing forms (Does not include advanced logic or multi-page forms) \n- Setup of up to 3 email templates (blog subscriptions, campaign promotion, lead nurturing) \n- Social media setup and integration \u2013 including social agent  \n- Creation of up to 20 custom properties for specific marketing needs \n- 1 Marketing Hub reporting dashboard created (up to 5 reports) \n- 1 Content Hub reporting dashboard created (up to 5 reports)\n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1118.2",
+   "recurring": null
+  },
+  {
+   "id": "42870534796",
+   "name": "[Onboarding] HubSpot for Marketers Pro: Elite",
+   "price": 5000.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Outline a lead flow plan (automated notifications, up to 5 basic workflows) \n- Setup of blog template to match brand standards \n- Migration of up to 40 blog posts\n- Setup of up to 5 landing page and thank you page templates to match brand standards \n- Setup of basic lead scoring template with up to 10 custom lead scoring criteria\n- Re-creation of up to 10 existing forms (Does not include advanced logic or multi-page forms) \n- Setup of up to 5 email templates (blog subscriptions, campaign promotion, lead nurturing) \n- Social media setup and integration \u2013 including social agent  \n- Creation of up to 20 custom properties for specific marketing needs \n- 1 Marketing Hub reporting dashboard created (up to 5 reports) \n- 1 Content Hub reporting dashboard created (up to 5 reports)\n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1118.1",
+   "recurring": null
+  },
+  {
+   "id": "42869729630",
+   "name": "[Onboarding] HubSpot for Marketers Pro: Standard",
+   "price": 4000.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Outline a lead flow plan (automated notifications, up to 5 basic workflows) \n- Setup of blog template to match brand standards \n- Migration of up to 20 blog posts\n- Setup of up to 3 landing page and thank you page templates to match brand standards \n- Setup of basic lead scoring template\n- Re-creation of up to 10 existing forms (Does not include advanced logic or multi-page forms) \n- Setup of up to 3 email templates (blog subscriptions, campaign promotion, lead nurturing) \n- Social media setup and integration \u2013 including social agent  \n- Creation of up to 20 custom properties for specific marketing needs \n- 1 Marketing Hub reporting dashboard created (up to 5 reports) \n- 1 Content Hub reporting dashboard created (up to 5 reports)\n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1118",
+   "recurring": null
+  },
+  {
+   "id": "42839103282",
+   "name": "[Base] HubSpot Portal Discovery",
+   "price": 500.0,
+   "description": "*Required for all new LeadG2 work done in existing HubSpot portals\n\nIncludes: \n- Up to One 2-hour discovery session during which your LeadG2 Consultant will analyze the current state of your HubSpot portal\n- Up to One 1-hour reporting session during which your LeadG2 Consultant will report on their findings within your portal as they relate to the proposed LeadG2 scope of work",
+   "sku": "1112",
+   "recurring": null
+  },
+  {
+   "id": "42834279555",
+   "name": "[Add-on] Email/Page Templates",
+   "price": 0.0,
+   "description": "",
+   "sku": "1157",
+   "recurring": null
+  },
+  {
+   "id": "42851155780",
+   "name": "[Add-on] Custom Object",
+   "price": 500.0,
+   "description": "Includes: \n- Identify the purpose and use cases of the custom object \n- Create up to 20 custom properties for the new object \n- Map the properties, associations, and required relationships with standard objects  \n- Build the custom object with required settings  \n- Create 1 pipeline for the custom object if applicable \n- Build up to 2 workflows for object creation, updates, notifications, routing, enrichment, and status changes\n- Build up to 5 additional reports for leveraging custom object",
+   "sku": "1152",
+   "recurring": null
+  },
+  {
+   "id": "42844495113",
+   "name": "[Add-on] Workflows/Automations",
+   "price": 0.0,
+   "description": "",
+   "sku": "1158",
+   "recurring": null
+  },
+  {
+   "id": "42835362973",
+   "name": "[Add-on] Brands",
+   "price": 500.0,
+   "description": "Includes: \n- Configure Brand(s) including domains, brand settings, and email subscription preferences. \n- Segment data and assets using properties, lists, workflows, and naming conventions. \n- Set up brand-specific assets and apply brand kits - up to 2 email templates, up to 3 forms (Does not include advanced logic forms), up to 2 page templates.\n- Assign users, permissions, and routing rules by Brand(s)",
+   "sku": "1150",
+   "recurring": null
+  },
+  {
+   "id": "42855801368",
+   "name": "[Add-on] Customer Portal",
+   "price": 0.0,
+   "description": "",
+   "sku": "1154",
+   "recurring": null
+  },
+  {
+   "id": "42841014694",
+   "name": "[Add-on] Service Points",
+   "price": 0.0,
+   "description": "Use service points for agreed marketing, HubSpot, or sales enablement work beyond the consulting or project scope, such as creating a campaign asset or building a custom report or workflow. We confirm the scope and expected point use before starting. If your proposal includes a separate HubSpot support-hours bank, eligible requests use that bank as outlined in your proposal.",
+   "sku": "1153",
+   "recurring": null
+  },
+  {
+   "id": "42836446748",
+   "name": "[Add-on] Advanced Logic Forms",
+   "price": 0.0,
+   "description": "",
+   "sku": "1159",
+   "recurring": null
+  },
+  {
+   "id": "42841323285",
+   "name": "[Add-on] Reports/Dashboards",
+   "price": 0.0,
+   "description": "",
+   "sku": "1155",
+   "recurring": null
+  },
+  {
+   "id": "42853557563",
+   "name": "[Add-on] Marketplace Native Integration",
+   "price": 500.0,
+   "description": "Includes: \n- Install the native integration from the HubSpot App Marketplace. \n- Create up to 10 new HubSpot properties where needed to support custom data. \n- Map external system fields to HubSpot standard/custom properties. \n- Configure association logic between objects (Company > Contact > Deal, etc.). \n- Identify and resolve mismatched field types, duplicates, and sync conflicts. \n- Build up to 3 supporting workflows to automate follow-ups, record creation, status updates, or notifications triggered by integration activity. \n- Test bidirectional (if applicable) sync with sample data and confirm end-to-end behavior for key use cases (example: new subscriber \u2192 HubSpot \u2192 nurture sequence).",
+   "sku": "1156",
+   "recurring": null
+  },
+  {
+   "id": "42849144435",
+   "name": "[Add-on] [Template]",
+   "price": 0.0,
+   "description": "",
+   "sku": "1180",
+   "recurring": null
+  },
+  {
+   "id": "42403531412",
+   "name": "[Base] HubSpot Foundations",
+   "price": 500.0,
+   "description": "*Required for all new portal setups\n\nIncludes: \n- HubSpot portal setup and configuration \n- Setup of up to 2 AI Data Sources Ideal Customer Profile(s)\n- Account and billing configuration guidance \n- User creation, access, and basic permission setup (does not include custom permission sets)\n- Core account settings review and alignment \n- Email sending domain setup guidance \n- Inbox Integration Support (Outlook/Gmail) \n- Tracking code installation guidance \n- Default lifecycle stage alignment",
+   "sku": "1111",
+   "recurring": null
+  },
+  {
+   "id": "42371173800",
+   "name": "[Onboarding] Service Hub Pro: Essential",
+   "price": 1500.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Customization of 1 ticket pipeline  \n- Setup of up to 3 ticket views \n- Conversation inbox or Help Desk configuration \n- Creation of up to 3 customer service email templates \n- Workflow setup for ticket automation and internal notifications (Limited to one automation/notification per ticket stage)\n- Up to 10 custom properties created specific to service/support needs \n- Creation of 1 service reporting dashboards (up to 5 reports) \n- Training \u2013 Up to 2 hours of dedicated training on Service Hub",
+   "sku": "1125",
+   "recurring": null
+  },
+  {
+   "id": "42406627252",
+   "name": "[Onboarding] Data Hub Enterprise: Standard",
+   "price": 3500.0,
+   "description": "- Creation of up to 40 custom properties for data structuring and reporting \n- Configuration of up to 5 deduplication and record matching rules \n- Data formatting and normalization standards setup \n- Configuration of up to 3 data syncs within HubSpot \n- Data governance framework setup (field usage, ownership, validation rules) \n- Creation of 1 data quality dashboard (up to 10 reports) \n- Data import and validation support (3 primary datasets) \n- Documentation of data architecture and integration logic \n- Training \u2013 3 hours of dedicated training on Data Hub usage and data management best practices",
+   "sku": "1146",
+   "recurring": null
+  },
+  {
+   "id": "42366291031",
+   "name": "[Onboarding] Sales Hub Pro: Essential",
+   "price": 1500.0,
+   "description": "Includes: \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2Consultant\n- Customization of HubSpot Sales settings - permissions/users \n- 1 deal pipeline created with basic deal automation & notifications setup (Limited to one automation/notification per deal stage)\n- Setup of meeting links and calling features \n- Creation of up to 5 email templates (for outreach, follow-ups, etc.) \n- Up to 3 saved views for companies, contacts, and deals \n- 1 templated sequences setup (up to 4 emails) \n- Creation of 1 sales reporting dashboard (up to 5 reports) \n- Training \u2013 Up to 2 hours of dedicated training",
+   "sku": "1119",
+   "recurring": null
+  },
+  {
+   "id": "42373651264",
+   "name": "[Onboarding] Revenue Hub Professional",
+   "price": 2000.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Configuration of standard product information, including: Product name and description, SKU, Unit price, Billing frequency, Term length, Tax category, where applicable, One-time and recurring pricing\n- Up to 10 custom revenue properties and record views\n- Configure company details \n- E-signature or click-to-accept configuration\n- Customize up to 1 branded quote templates (logos, colors, terms, footer text) \n- Import/input product library with provided information \n- Creation of 1 supporting workflow\n- Map product properties to deal line items \n- Create discounts or bundled products (if applicable) \n- Review and align currency and tax settings \n- Training \u2013 Up to 4 hour of dedicated training on Revenue Hub",
+   "sku": "1138",
+   "recurring": null
+  },
+  {
+   "id": "42391339927",
+   "name": "[Onboarding] Content Hub Pro: Essential",
+   "price": 2000.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Setup of basic blog template\n- Setup of up to 2 basic landing page/thank you page templates\n- 1 reporting dashboard created (5 reports) \n- Training \u2013 Up to 2 hours of dedicated training",
+   "sku": "1131",
+   "recurring": null
+  },
+  {
+   "id": "42391184534",
+   "name": "[Onboarding] Content Hub Enterprise: Standard",
+   "price": 4000.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- AI settings setup in HubSpot \u2013 company profile, ICP, products/services, user profiles\n- Setup of blog template to match brand standards\n- Migration of up to 20 blog posts\n- Setup of up to 5 landing page and thank you page templates to match brand standards \n- 2 reporting dashboards created (5 reports each) \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1134",
+   "recurring": null
+  },
+  {
+   "id": "42406937920",
+   "name": "[Onboarding] Sales Hub Enterprise: Elite",
+   "price": 4000.0,
+   "description": "Includes:  \n- Up to Two 1-hour meetings for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- CRM Usage Guidelines  \n- Customization of HubSpot Sales settings \u2013 permissions/users \n- 2 deal pipelines created with basic deal automation & notifications setup (Up to 3 automations/notifications per deal stage)\n- Setup of meeting links and calling features \n- Creation of up to 10 email templates (for outreach, follow-ups, etc.) \n- Prospecting agent training/setup support \n- Up to 5 saved views for contacts, companies, and deals \n- 2 templated sequences setup (up to 4 emails) \n- Creation of 2 sales reporting dashboard (up to 5 reports each) \n- Organize up to 10 teams based on region, business unit, etc.  \n- Create up to 4 custom events specific to sales \n- Create up to 3 forms with lead form routing \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1123",
+   "recurring": null
+  },
+  {
+   "id": "42379138587",
+   "name": "[Onboarding] Content Hub Pro: Elite",
+   "price": 4000.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- AI settings setup in HubSpot \u2013 company profile, ICP, products/services, user profiles\n- Setup of blog template to match brand standards\n- Migration of up to 40 blog posts \n- Setup of up to 5 landing page/thank you page templates to match brand standards\n- 2 reporting dashboards created (5 reports) \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1133",
+   "recurring": null
+  },
+  {
+   "id": "42415731738",
+   "name": "[Onboarding] Marketing Hub Enterprise: Elite",
+   "price": 5500.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Re-creation of up to 10 existing forms (Includes up to 5 advanced logic/multi-page forms) \n- Setup of up to 5 email templates (blog subscriptions, campaign promotion, lead nurturing, etc) \n- 2 reporting dashboards created (5 reports each) \n- Social media setup and integration \u2013 including social agent  \n- Outline a lead flow plan (automated notifications, basic workflows) \n- Creation of up to 20 custom properties for specific marketing needs \n- Build up to 2 multi-stage customer journeys  \n- Create up to 4 custom events specific to marketing \n-Setup of two basic lead scoring templates with up to 10 custom lead scoring criteria each\n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1117",
+   "recurring": null
+  },
+  {
+   "id": "42381772574",
+   "name": "[Onboarding] Service Hub Enterprise: Elite",
+   "price": 4000.0,
+   "description": "Includes:  \n- Up to Two 1-hour meetings for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Customization of 4 ticket pipelines \n- Setup of up to 5 ticket views \n- Creation of 5 customer feedback surveys (NPS, CSAT, CES) \n- Knowledge base import support (up to 10 knowledge base articles with provided content) \n- Setup of live chat and/or chatbot (up to 2 chat flows) \n- Conversation inbox or Help Desk configuration \n- Creation of up to 5 customer service email templates \n- Workflow setup for ticket automation and internal notifications \n- Up to 20 custom properties created specific to service/support needs \n- Creation of 1 service reporting dashboards (up to 5 reports)\n- Organize up to 10 teams based on region, business unit, etc. \n- Create up to 4 custom events specific to service  \n-Build 1 dashboard with 5 reports for recurring revenue tracking and renewals \n- Setup up to 3 skills-based ticket routing rules \n- Training \u2013 Up to 6 hours of dedicated training on Service Hub",
+   "sku": "1129",
+   "recurring": null
+  },
+  {
+   "id": "42370400532",
+   "name": "[Onboarding] Marketing Hub Pro: Essential",
+   "price": 2500.0,
+   "description": "Includes: \n- Up to One 1-hour meeting for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Re-creation of up to 5 existing forms (Does not include multi-page or advanced logic forms) \n- Setup of up to 2 email templates  \n- Standard HubSpot Marketing reporting dashboard created (up to 5 reports) \n- Social media setup and integration \n- Training \u2013 Up to 2 hours of dedicated training",
+   "sku": "1113",
+   "recurring": null
+  },
+  {
+   "id": "42419908189",
+   "name": "[Onboarding] Sales Hub Enterprise: Standard",
+   "price": 3000.0,
+   "description": "Includes:  \n- Up to Two 1-hour meetings for project discovery\n- Up to 1 hour meeting to review project recommendations with your LeadG2 Consultant\n- CRM Usage Guidelines  \n- Customization of HubSpot Sales settings \u2013 permissions/users \n- 2 deal pipelines created with basic deal automation & notifications setup (Up to two automations/notifications per deal stage)\n- Setup of meeting links and calling features \n- Creation of up to 10 email templates (for outreach, follow-ups, etc.) \n- Prospecting agent training/setup support \n- Up to 5 saved views for contacts, companies, and deals \n- 2 templated sequences setup (up to 4 emails) \n- Creation of 1 sales reporting dashboard (up to 5 reports) \n- Organize up to 10 teams based on region, business unit, etc.  \n- Create up to 4 custom events specific to sales \n- Create up to 3 forms with lead form routing \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1122",
+   "recurring": null
+  },
+  {
+   "id": "42420835623",
+   "name": "[Onboarding] Content Hub Enterprise: Elite",
+   "price": 5500.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- AI settings setup in HubSpot \u2013 company profile, ICP, products/services, user profiles\n- Setup of blog template to match brand standards\n- Migration of up to 40 blog posts\n- Setup of up to 5 landing page and thank you page templates to match brand standards\n- 2 reporting dashboards created (5 reports each) \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1135",
+   "recurring": null
+  },
+  {
+   "id": "42411111980",
+   "name": "[Onboarding] Service Hub Pro: Elite",
+   "price": 3000.0,
+   "description": "Includes:  \n- Up to Two 1-hour meetings for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Customization of 2 ticket pipelines \n- Setup of up to 5 ticket views \n- Creation of 3 customer feedback surveys (NPS, CSAT, CES) \n- Knowledge base import support (up to 10 knowledge base articles with provided content) \n- Setup of live chat and/or chatbot (up to 3 chat flows) \n- Conversation inbox or Help Desk configuration \n- Creation of up to 5 customer service email templates \n- Workflow setup for ticket automation and internal notifications (Up to two automations/notifications per ticket stage)\n- Up to 30 custom properties created specific to service/support needs \n- Creation of 1 service reporting dashboards (up to 5 reports) \n- Training \u2013 Up to 6 hours of dedicated training on Service Hub",
+   "sku": "1127",
+   "recurring": null
+  },
+  {
+   "id": "42376042366",
+   "name": "[Onboarding] Service Hub Pro: Standard",
+   "price": 2000.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Customization of 1 ticket pipeline  \n- Setup of up to 5 ticket views \n- Creation of 2 customer feedback surveys (NPS, CSAT, CES) \n- Knowledge base import support (up to 5 knowledge base articles with provided content) \n- Setup of live chat and/or chatbot (up to 2 chat flows) \n- Conversation inbox or Help Desk configuration \n- Creation of up to 5 customer service email templates \n- Workflow setup for ticket automation and internal notifications \n- Up to 20 custom properties created specific to service/support needs \n- Creation of 1 service reporting dashboards (up to 5 reports) \n- Training \u2013 Up to 3 hours of dedicated training on Service Hub",
+   "sku": "1126",
+   "recurring": null
+  },
+  {
+   "id": "42397223484",
+   "name": "[Onboarding] Marketing Hub Enterprise: Standard",
+   "price": 4000.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Outline a lead flow plan (automated notifications, up to 10 basic workflows) \n- Re-creation of up to 10 existing forms (Does not include advanced logic forms) \n- Setup of up to 3 email templates (blog subscriptions, campaign promotion, lead nurturing) \n- 2 reporting dashboards created (5 reports each) \n- Social media setup and integration \u2013 including social agent  \n- Creation of up to 20 custom properties for specific marketing needs \n- Build up to 2 multi-stage customer journeys  \n- Create up to 4 custom events specific to marketing \n- Setup of basic lead scoring template \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1116",
+   "recurring": null
+  },
+  {
+   "id": "42378674440",
+   "name": "[Onboarding] Data Hub Pro: Essential",
+   "price": 2000.0,
+   "description": "- Creation of up to 20 custom properties for data structuring and reporting \n- Configuration of up to 2 deduplication and record matching rules \n- Data formatting and normalization standards setup \n- Configuration of 1 data sync within HubSpot \n- Data governance framework setup (field usage, ownership, validation rules) \n- Creation of 1 data quality dashboard (up to 5 reports) \n- Data import and validation support (1 primary dataset) \n- Documentation of data architecture and integration logic \n- Training \u2013 3 hours of dedicated training on Data Hub usage and data management best practices",
+   "sku": "1143",
+   "recurring": null
+  },
+  {
+   "id": "42391649091",
+   "name": "[Onboarding] Marketing Hub Pro: Standard",
+   "price": 3000.0,
+   "description": "Includes: \n- Up to One 1-hour meeting for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Outline a lead flow plan (automated notifications, up to 5 basic workflows) \n- Setup of basic lead scoring template\n- Re-creation of up to 10 existing forms (Does not include advanced logic or multi-page forms) \n- Setup of up to 3 email templates (blog subscriptions, campaign promotion, lead nurturing) \n- Social media setup and integration \u2013 including social agent  \n- Creation of up to 20 custom properties for specific marketing needs \n- 1 reporting dashboard created (up to 5 reports) \n- Training \u2013 Up to 3 hours of dedicated training",
+   "sku": "1114",
+   "recurring": null
+  },
+  {
+   "id": "42399079424",
+   "name": "[Onboarding] Marketing Hub Pro: Elite",
+   "price": 4000.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery  \n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Brand Kit setup in HubSpot \u2013 colors, themes, logos, brand voice \n- Re-creation of up to 10 existing forms (Includes up to 3 advanced logic/multi-page forms) \n- Setup of up to 6 email templates (blog subscriptions, campaign promotion, lead nurturing) \n- 2 reporting dashboards created (up to 5 reports per dashboard) \n- Social media setup and integration \u2013 including social agent  \n- Outline a lead flow plan (automated notifications, up to 10 basic workflows) \n- Creation of up to 20 custom properties for specific marketing needs \n- Setup of basic lead scoring template with up to 10 custom lead scoring criteria \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1115",
+   "recurring": null
+  },
+  {
+   "id": "42418981710",
+   "name": "[Onboarding] Content Hub Pro: Standard",
+   "price": 3000.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- AI settings setup in HubSpot \u2013 company profile, ICP, products/services, user profiles\n- Setup of blog template to match brand standards \n- Migration of up to 20 blog posts\n- Setup of up to 3 landing page and thank you page templates to match brand standards \n- 1 reporting dashboard created (5 reports) \n- Training \u2013 Up to 3 hours of dedicated training",
+   "sku": "1132",
+   "recurring": null
+  },
+  {
+   "id": "42442666623",
+   "name": "[Onboarding] Data Hub Pro: Standard",
+   "price": 2000.0,
+   "description": "Includes:  \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Creation of up to 25 custom properties for data structuring and reporting \n- Configuration of deduplication and record matching rules \n- Data formatting and normalization standards setup \n- Configuration of data sync and mapping rules within HubSpot \n- Data governance framework setup (field usage, ownership, validation rules) \n- Creation of 1 data quality dashboard (up to 5 reports) \n- Data import and validation support (1 primary dataset) \n- Documentation of data architecture and integration logic \n- Training \u2013 Up to 3 hours of dedicated training on Data Hub usage and data management best practices",
+   "sku": "1144",
+   "recurring": null
+  },
+  {
+   "id": "42399388416",
+   "name": "[Onboarding] Sales Hub Pro: Elite",
+   "price": 3000.0,
+   "description": "Includes: \n- Up to Two 1-hour meetings for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- CRM Usage Guidelines  \n- Customization of HubSpot Sales settings \u2013 permissions/users \n- 2 deal pipelines created with basic deal automation & notifications setup (Up to two automations/notifications per deal stage)\n- Setup of meeting links and calling features \n- Creation of up to 10 email templates (for outreach, follow-ups, etc.) \n- Prospecting agent training/setup support \n- Up to 5 saved views for companies, contacts, and deals \n- 2 templated sequences setup (up to 4 emails) \n- Creation of 1 sales reporting dashboard (up to 5 reports) \n- Training \u2013 Up to 6 hours of dedicated training",
+   "sku": "1121",
+   "recurring": null
+  },
+  {
+   "id": "42408794406",
+   "name": "[Onboarding] Sales Hub Pro: Standard",
+   "price": 2000.0,
+   "description": "Includes: \n- Up to One 1-hour meeting for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2Consultant\n- CRM Usage Guidelines  \n- Customization of HubSpot Sales settings - permissions/users \n- 1 deal pipeline created with basic deal automation & notifications setup (Up to two automations/notifications per deal stage) \n- Setup of meeting links and calling features \n- Creation of up to 10 email templates (for outreach, follow-ups, etc.) \n- Prospecting agent training/setup support \n- Up to 5 saved views for companies, contacts, and deals \n- 2 templated sequences setup (up to 4 emails) \n- Creation of 1 sales reporting dashboard (up to 5 reports) \n- Training \u2013 Up to 3 hours of dedicated training",
+   "sku": "1120",
+   "recurring": null
+  },
+  {
+   "id": "42375887752",
+   "name": "[Onboarding] Service Hub Enterprise: Standard",
+   "price": 3000.0,
+   "description": "Includes:  \n- Up to Two 1-hour meetings for project discovery\n- Up to One 1-hour meeting to review project recommendations with your LeadG2 Consultant\n- Customization of 2 ticket pipelines \n- Setup of up to 5 ticket views \n- Creation of 3 customer feedback surveys (NPS, CSAT, CES) \n- Knowledge base import support (up to 10 knowledge base articles with provided content) \n- Setup of live chat and/or chatbot (up to 2 chat flows) \n- Conversation inbox or Help Desk configuration \n- Creation of up to 5 customer service email templates \n- Workflow setup for ticket automation and internal notifications \n- Up to 20 custom properties created specific to service/support needs \n- Creation of 1 service reporting dashboards (up to 5 reports)\n- Organize up to 10 teams based on region, business unit, etc. \n- Create up to 4 custom events specific to service  \n-Build 1 dashboard with 5 reports for recurring revenue tracking and renewals \n- Setup up to 3 skills-based ticket routing rules \n- Training \u2013 Up to 6 hours of dedicated training on Service Hub",
+   "sku": "1128",
+   "recurring": null
+  },
+  {
+   "id": "41587418977",
+   "name": "Data Import",
+   "price": 250.0,
+   "description": "- Historical imports from the current CRM (Contacts, Companies, and Opportunities)\n- Data exports to be provided by the client, clean and ready for import",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "40469348159",
+   "name": "Service Hub Customer Portal",
+   "price": 2000.0,
+   "description": "- Configuration of a HubSpot Customer Portal using native Service Hub functionality\n- Setup of secure portal access for clients via contact and company records\n- Implementation of role-based permissions to control client visibility\n- Application of basic portal branding (logo, colors, layout using HubSpot defaults)\n- Configuration of client-facing ticket visibility within the portal\n- Enablement of client ticket submission through the portal\n- Mapping of portal-submitted tickets to appropriate pipelines and statuses\n- Configuration of approved client-facing forms accessible within the portal\n- Mapping of form submissions to HubSpot records and properties\n- Setup of standard portal-related notifications (ticket created, updated, closed)\n- Validation and testing of portal access, permissions, and visibility rules\n\nNotes / Guardrails\n- Deliverables leverage native HubSpot capabilities only\n- Custom development, advanced custom objects, or third-party portal tools are excluded unless scoped separately",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "40429371763",
+   "name": "Additional Training Hour",
+   "price": 125.0,
+   "description": "On-demand HubSpot training support beyond onboarding.\nThese additional training hours can be used for live, consultant-led sessions focused on specific tools, workflows, reporting, or team enablement needs. Ideal for teams who want continued learning or deeper dives after onboarding wraps.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "36965635998",
+   "name": "Website Development Additional 5 Pages",
+   "price": 600.0,
+   "description": "",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "36965697909",
+   "name": "Post onboarding Subscription - Enablement Plus",
+   "price": 3500.0,
+   "description": "- One 60-min training session/month (sales, marketing, or leadership)\n- One 60-min monthly strategy session\n- Quarterly performance reviews\n- Monthly dedicated office hours (60 min)\n- Access to templates and onboarding refreshers\n- Personalized usage + adoption reports",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "36863816812",
+   "name": "Post onboarding Subscription - Optimize & Grow",
+   "price": 2000.0,
+   "description": "- Two 60-minute strategy sessions/month\n- Ongoing feature adoption + best-practice recommendations\n- Sales & marketing alignment conversations\n- Quarterly adoption + performance review\n- Email support for quick questions",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "36966196018",
+   "name": "Business Unit Setup & Configuration",
+   "price": 500.0,
+   "description": "- Configure Business Unit(s) including domains, brand settings, and email subscription preferences. \n- Segment data and assets using properties, lists, workflows, and naming conventions. \n- Set up brand-specific assets and apply brand kits - up to 2 email templates, up to 5 forms, up to 2 pages.  \n- Assign users, permissions, and routing rules by Business Unit.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "36863816811",
+   "name": "Native Marketplace Integration",
+   "price": 500.0,
+   "description": "- Install the native integration from the HubSpot App Marketplace. \n- Create up to 10 new HubSpot properties where needed to support custom data. \n- Map external system fields to HubSpot standard/custom properties. \n- Configure association logic between objects (Company > Contact > Deal, etc.). \n- Identify and resolve mismatched field types, duplicates, and sync conflicts. \n- Build up to 5 supporting workflows to automate follow-ups, record creation, status updates, or notifications triggered by integration activity. \n- Test bidirectional sync with sample data and confirm end-to-end behavior for key use cases (example: new subscriber \u2192 HubSpot \u2192 nurture sequence).",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "36965697908",
+   "name": "Custom Object Build",
+   "price": 500.0,
+   "description": "- Identify the purpose and use cases of the custom object. \n- Create up to 20 custom properties for the new object \n- Map the properties, associations, and required relationships with standard objects  \n- Build the custom object with required settings  \n- Create 1 pipeline for the custom object if applicable \n- Build up to 2 workflows for object creation, updates, notifications, routing, enrichment, and status changes. \n- Build up to 5 additional reports for leveraging custom object",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "36966319479",
+   "name": "Website Maintenance Package (Essential Care)",
+   "price": 350.0,
+   "description": "We will make as needed monthly updates on the following: \n\n- Theme, plugin & platform updates as needed \n- Security monitoring & regular backups \n- Content updates & copy swaps (2 requests/month) \n- Minor fixes \u2013 broken links, forms, new images \n- Monthly site health summary",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29133482295",
+   "name": "HubSpot Portal Audit - 3 Hubs",
+   "price": 5000.0,
+   "description": "Upon granting us access to your HubSpot account, we will conduct a thorough audit. After the audit is complete, we will schedule a call up to 2-hours to review our findings in detail. The portal audit takes 2-6 weeks, depending on the number of hubs and the overall state of the HubSpot portal.\u202fAt the conclusion of the audit, we will present a retainer proposal to address the findings. If the client chooses to sign a retainer agreement with us, we will deduct the $3,000-$5,000 paid for the audit from the total cost of the retainer. \n\nDeliverables include: \n- A comprehensive audit report in PDF format, covering all findings and recommendations. \n- Up to a 2-hour review call to discuss the details of each section of the audit.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29123230582",
+   "name": "HubSpot Portal Audit - 2 Hub",
+   "price": 4000.0,
+   "description": "Upon granting us access to your HubSpot account, we will conduct a thorough audit. After the audit is complete, we will schedule a call up to 2-hours to review our findings in detail. The portal audit takes 2-6 weeks, depending on the number of hubs and the overall state of the HubSpot portal.\u202fAt the conclusion of the audit, we will present a retainer proposal to address the findings. If the client chooses to sign a retainer agreement with us, we will deduct the $3,000-$5,000 paid for the audit from the total cost of the retainer. \n\nDeliverables include: \n- A comprehensive audit report in PDF format, covering all findings and recommendations. \n- Up to a 2-hour review call to discuss the details of each section of the audit.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29134147906",
+   "name": "HubSpot Portal Audit - 1 Hub",
+   "price": 3000.0,
+   "description": "Upon granting us access to your HubSpot account, we will conduct a thorough audit. After the audit is complete, we will schedule a call up to 2-hours to review our findings in detail. The portal audit takes 2-6 weeks, depending on the number of hubs and the overall state of the HubSpot portal.\u202fAt the conclusion of the audit, we will present a retainer proposal to address the findings. If the client chooses to sign a retainer agreement with us, we will deduct the $3,000-$5,000 paid for the audit from the total cost of the retainer. \n\nDeliverables include: \n- A comprehensive audit report in PDF format, covering all findings and recommendations. \n- Up to a 2-hour review call to discuss the details of each section of the audit.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29134147905",
+   "name": "1 Day (9am-4pm) In-Market Meeting / Training (plus travel)",
+   "price": 2500.0,
+   "description": "A full-day, on-site workshop tailored to your business needs. Connect directly with your C-suite, train and empower your sales team, and collaborate with your marketing department on strategy\u2014all guided by a dedicated lead consultant. Maximize impact with hands-on, in-person expertise.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29135125944",
+   "name": "Website Development on Content Hub (up to ten pages)",
+   "price": 8000.0,
+   "description": "During our partnership, we will oversee the development of your new website in HubSpot Content Hub. This is not a custom website development project but rather an opportunity to use one of the many template pack options inside of the HubSpot marketplace. Our team will then personalize it to fit your brand and needs.  \n\nOur website services include: \n- Thorough audit of your existing website and recommendations for new site map, navigation, lead gen paths, CTAs, and more.  \n- Assistance in choosing a HubSpot template (free and paid options available \u2013 additional costs may apply depending on the template you choose)  \n\nPersonalization of the template which includes: \n- Branding throughout  \n- Minor customization of modules  \n- Colors and fonts updated  \n- Header, navigation, and footer customized  \n- Creation of up to 10 website page templates - Home page, about page, services page, positioning page, contact page, blog, etc.) + 5 additional pages using a pre-existing template (i.e. the individual service pages). Additional pages can be built using service points if needed \n- Creation of all forms and initial landing pages on new templates  \n- Set up and/or migration of all blog content \n- Application of keyword strategy and optimization of all website pages  \n- Management of URL/domain Set up plus recommendations for redirects",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29134147904",
+   "name": "Podcasting without Promotion - 10 episodes",
+   "price": 8200.0,
+   "description": "Seasons will be recorded in bulk at one time (ideally within 1 or 2 weeks) and then published and rolled out according to calendar/timeline.  \n\nDeliverables include:  \n- Season Calendar with Topics, Themes, and Guests  \n- Outreach and Management of Guests  \n- Create Episode Breakdown Doc for Each Episode  \n- Serve as Your Technical Engineer and Producer / Record Episodes \n- Editing and Mixing of Episodes Including Music and Branding Placement  \n- Show Notes Written \n- Episode Transcription \n- RSS Uploading\n\nSeason Promotion \nWe\u2019ll support your podcast to spread the word and drive listeners \u2013 this will be done organically through social, email, your website, and 1:1 outreach.  \n\nDeliverables include:  \n- Promotional Plan & Calendar Created \n- Social Media Posts Written & Published  \n- Blog Posts Written & Uploaded (x6)  \n- Audiograms Created (x6)  \n- Email Marketing (x2)  \n- Guest Communication for Additional Promotion  \n- Email Templates for 1:1 Promotion Created",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29132902216",
+   "name": "Podcasting without Promotion - 8 episodes",
+   "price": 7000.0,
+   "description": "Seasons will be recorded in bulk at one time (ideally within 1 or 2 weeks) and then published and rolled out according to calendar/timeline.  \n\nDeliverables include:  \n- Season Calendar with Topics, Themes, and Guests  \n- Outreach and Management of Guests  \n- Create Episode Breakdown Doc for Each Episode  \n- Serve as Your Technical Engineer and Producer / Record Episodes \n- Editing and Mixing of Episodes Including Music and Branding Placement  \n- Show Notes Written \n- Episode Transcription \n- RSS Uploading",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29123230581",
+   "name": "Podcasting without Promotion - 6 episodes",
+   "price": 5500.0,
+   "description": "Seasons will be recorded in bulk at one time (ideally within 1 or 2 weeks) and then published and rolled out according to calendar/timeline.  \n\nDeliverables include:  \n- Season Calendar with Topics, Themes, and Guests  \n- Outreach and Management of Guests  \n- Create Episode Breakdown Doc for Each Episode  \n- Serve as Your Technical Engineer and Producer / Record Episodes \n- Editing and Mixing of Episodes Including Music and Branding Placement  \n- Show Notes Written \n- Episode Transcription \n- RSS Uploading",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29134209686",
+   "name": "Podcasting with Promotion - 10 Episodes",
+   "price": 16000.0,
+   "description": "Seasons will be recorded in bulk at one time (ideally within 1 or 2 weeks) and then published and rolled out according to calendar/timeline.  \n\nDeliverables include:  \n- Season Calendar with Topics, Themes, and Guests  \n- Outreach and Management of Guests  \n- Create Episode Breakdown Doc for Each Episode  \n- Serve as Your Technical Engineer and Producer / Record Episodes \n- Editing and Mixing of Episodes Including Music and Branding Placement  \n- Show Notes Written \n- Episode Transcription \n- RSS Uploading\n\nSeason Promotion \nWe\u2019ll support your podcast to spread the word and drive listeners \u2013 this will be done organically through social, email, your website, and 1:1 outreach.  \n\nDeliverables include:  \n- Promotional Plan & Calendar Created \n- Social Media Posts Written & Published  \n- Blog Posts Written & Uploaded (x6)  \n- Audiograms Created (x6)  \n- Email Marketing (x2)  \n- Guest Communication for Additional Promotion  \n- Email Templates for 1:1 Promotion Created",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29133482292",
+   "name": "Podcasting with Promotion - 8 Episodes",
+   "price": 14000.0,
+   "description": "Seasons will be recorded in bulk at one time (ideally within 1 or 2 weeks) and then published and rolled out according to calendar/timeline.  \n\nDeliverables include:  \n- Season Calendar with Topics, Themes, and Guests  \n- Outreach and Management of Guests  \n- Create Episode Breakdown Doc for Each Episode  \n- Serve as Your Technical Engineer and Producer / Record Episodes \n- Editing and Mixing of Episodes Including Music and Branding Placement  \n- Show Notes Written \n- Episode Transcription \n- RSS Uploading\n\nSeason Promotion \nWe\u2019ll support your podcast to spread the word and drive listeners \u2013 this will be done organically through social, email, your website, and 1:1 outreach.  \n\nDeliverables include:  \n- Promotional Plan & Calendar Created \n- Social Media Posts Written & Published  \n- Blog Posts Written & Uploaded (x6)  \n- Audiograms Created (x6)  \n- Email Marketing (x2)  \n- Guest Communication for Additional Promotion  \n- Email Templates for 1:1 Promotion Created",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29134147902",
+   "name": "Podcasting with Promotion - 6 Episodes",
+   "price": 12000.0,
+   "description": "Seasons will be recorded in bulk at one time (ideally within 1 or 2 weeks) and then published and rolled out according to calendar/timeline.  \n\nDeliverables include:  \n- Season Calendar with Topics, Themes, and Guests  \n- Outreach and Management of Guests  \n- Create Episode Breakdown Doc for Each Episode  \n- Serve as Your Technical Engineer and Producer / Record Episodes \n- Editing and Mixing of Episodes Including Music and Branding Placement  \n- Show Notes Written \n- Episode Transcription \n- RSS Uploading\n\nSeason Promotion \nWe\u2019ll support your podcast to spread the word and drive listeners \u2013 this will be done organically through social, email, your website, and 1:1 outreach.  \n\nDeliverables include:  \n- Promotional Plan & Calendar Created \n- Social Media Posts Written & Published  \n- Blog Posts Written & Uploaded (x6)  \n- Audiograms Created (x6)  \n- Email Marketing (x2)  \n- Guest Communication for Additional Promotion  \n- Email Templates for 1:1 Promotion Created",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29132902214",
+   "name": "Podcast Set Up (Required for all new Podcasting clients)",
+   "price": 2000.0,
+   "description": "This is a one-time project to get your podcast up and running. The LeadG2 team will oversee all parts from ideation and strategy to technical set-up and branding.  \n\nDeliverables include: \n- Strategic Podcast GamePlan (includes name, concept, audience development, podcast season and episode structure, branding & style guide, etc.)  \n- Podcast Bio  \n- Logo & Cover Art Created  \n- Audio Branding / Music Selection / Intro and Outro Creation  \n- Website Landing Page Creation on HubSpot\n- Social Media Promotional Templates Created Including Audiograms  \n- Set up / Apply for all Podcast Platforms \n- Set up Streamyard (or similar)  \n- Recording and Equipment Tests with Hosts  \n- Training on Best Practices and Interviewing Tips  \n- Episode Breakdown Outline Template Created",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "29135125940",
+   "name": "Service Point",
+   "price": 125.0,
+   "description": "Use service points for agreed marketing, HubSpot, or sales enablement work beyond the consulting or project scope, such as creating a campaign asset or building a custom report or workflow. We confirm the scope and expected point use before starting. If your proposal includes a separate HubSpot support-hours bank, eligible requests use that bank as outlined in your proposal.",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "3616191861",
+   "name": "Marketing Strategy Accelerator",
+   "price": 15000.0,
+   "description": "- Bi-weekly calls with consultant  \n- Business & Revenue Goal Alignment \n- Competitive Analysis & Market Positioning \n- Target Persona Development \n- Marketing Audit (Website, SEO, Content, CRM, Automation) \n- Lead Generation & Demand Generation Strategy \n- Content Strategy & 12-Month Roadmap \n- Blog, email, social media, and thought leadership content \n- SEO keyword strategy & content pillars \n- 4 Fully Planned Marketing Campaigns \n- Goals, messaging, assets needed, and execution steps \n- Email Marketing & Lead Nurture Sequences \n- Sales & Marketing Alignment Framework \n- KPI Tracking Setup \n- Final deliverable is a PDF of all recommendations",
+   "sku": null,
+   "recurring": null
+  },
+  {
+   "id": "3626278717",
+   "name": "Marketing Consulting",
+   "price": 2000.0,
+   "description": "Proactive marketing strategy and prioritization with your Lead Consultant. Includes meetings every other week with agendas and recaps, a monthly KPI update with interpretation and recommended next steps, email guidance, campaign performance review, and routine maintenance of active campaigns within the agreed scope. New assets and builds beyond the agreed scope use service points or other quoted services as applicable.",
+   "sku": null,
+   "recurring": "monthly"
+  }
+ ]
+}

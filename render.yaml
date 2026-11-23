@@ -1,0 +1,43 @@
+# Render Blueprint — New > Blueprint in the Render dashboard, point it at this repo.
+services:
+  - type: web
+    name: leadg2-scoping-agent
+    runtime: node
+    plan: starter # a persistent disk needs a paid instance
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: proposals
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATA_DIR
+        value: /var/data
+      # Secrets — you'll be prompted for these when the Blueprint is created
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: HUBSPOT_ACCESS_TOKEN
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
+      - key: APP_USERNAME
+        value: leadg2
+      # Presenter shown on the cover, next steps and thank-you slides
+      - key: LEADG2_CONTACT_NAME
+        sync: false
+      - key: LEADG2_CONTACT_TITLE
+        sync: false
+      - key: LEADG2_CONTACT_EMAIL
+        sync: false
+      - key: LEADG2_CONTACT_PHONE
+        sync: false
+      - key: LEADG2_CONTACT_WEBSITE
+        value: leadg2.com
+      # Pricing
+      - key: NEXT_PUBLIC_LEADG2_HOURLY_RATE
+        value: "125"
+      - key: NEXT_PUBLIC_LEADG2_CONSULTING_MONTHLY
+        value: "2000"
