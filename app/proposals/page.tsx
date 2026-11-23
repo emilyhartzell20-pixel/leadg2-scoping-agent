@@ -9,9 +9,15 @@ export default async function ProposalsPage() {
   return (
     <>
       <AppHeader />
-      <main className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-        <p className="eyebrow">Library</p>
-        <h1 className="mb-8 mt-2 text-4xl">All proposals</h1>
+      <section className="bg-cream">
+        <div className="mx-auto max-w-page px-[18px] pb-14 pt-16 sm:px-8">
+          <h1 className="text-[40px]">
+            All <span className="accent">proposals</span>
+          </h1>
+          <p className="lead mt-3">Every executive summary and deck you&apos;ve generated, newest first.</p>
+        </div>
+      </section>
+      <main className="mx-auto max-w-page px-[18px] py-12 sm:px-8">
         <ProposalList items={items} />
       </main>
     </>

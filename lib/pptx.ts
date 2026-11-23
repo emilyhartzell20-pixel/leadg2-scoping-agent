@@ -9,7 +9,7 @@ import { contractEnd, fmtPoints, formatDate, formatK, formatUSD, type Proposal }
 
 /**
  * Server-side LeadG2 proposal deck, styled after the BridgeTower / Hubbard decks:
- * navy glow backgrounds, the official LeadG2 logo files, Montserrat titles, Inter body, Lora italic accents.
+ * navy glow backgrounds, the official LeadG2 logo files, Mulish titles/labels and Lora body (brand guide v1.1).
  * LAYOUT_WIDE = 13.33 x 7.5 in. Slides for options / service points / open questions appear only when relevant.
  */
 
@@ -30,8 +30,10 @@ const C = {
   rule: "E3E6EA",
   border: "D9DDE3",
 };
-const HEAD = "Montserrat";
-const BODY = "Inter";
+// LeadG2 brand guide v1.1: Mulish for headlines/UI/labels, Lora for body copy and accents.
+const HEAD = "Mulish";
+const BODY = "Lora";
+const UI = "Mulish";
 const SERIF = "Lora";
 const W = 13.333;
 const H = 7.5;
@@ -46,7 +48,7 @@ function assets() {
   if (!cache) {
     cache = {
       bg: [1, 2, 3, 4, 5, 6].map((i) => asset(`bg${i}.jpg`, "image/jpeg")),
-      logoColor: asset("logo-color.png", "image/png"), // 1200 x 234
+      logoColor: asset("logo-on-dark.png", "image/png"), // 1200 x 234 — LEAD Orange, G2 Steel (primary lockup on dark)
       logoTagline: asset("logo-color-tagline.png", "image/png"), // 1200 x 348
     };
   }
@@ -89,7 +91,7 @@ export async function buildDeck(p: Proposal): Promise<Buffer> {
     s.background = { color: fill };
     return s;
   };
-  /** Dark slides: color logo. Light slides: color logo with tagline (as in the reference decks). */
+  /** Dark slides: primary lockup (G2 Steel). Light slides: color logo with tagline. */
   const logo = (s: Slide, isDark: boolean, x?: number, y = 0.5) => {
     if (isDark) {
       const w = 1.67;
@@ -109,7 +111,7 @@ export async function buildDeck(p: Proposal): Promise<Buffer> {
 
   function badge(s: Slide, x: number, y: number, label: string, fill = C.orange, color = C.white, size = 0.39) {
     s.addShape(R.roundRect, { x, y, w: size, h: size, fill: { color: fill }, line: { color: fill }, rectRadius: 0.06 });
-    text(s, label, { x, y, w: size, h: size, fontSize: 14, bold: true, color, align: "center", valign: "middle" });
+    text(s, label, { x, y, w: size, h: size, fontFace: UI, fontSize: 14, bold: true, color, align: "center", valign: "middle" });
   }
 
   function card(s: Slide, x: number, y: number, w: number, h: number, isDark: boolean, highlight = false) {
@@ -374,7 +376,7 @@ export async function buildDeck(p: Proposal): Promise<Buffer> {
       ],
     ];
     s.addTable(rows, {
-      x: tx, y: 2.35, w: tw, colW: [tw - 3.3, 1.1, 1.1, 1.1], fontFace: BODY, fontSize: 11.5, valign: "middle",
+      x: tx, y: 2.35, w: tw, colW: [tw - 3.3, 1.1, 1.1, 1.1], fontFace: UI, fontSize: 11.5, valign: "middle",
       rowH: Math.min(0.42, 4.35 / rows.length), border: { type: "solid", pt: 0.75, color: C.navyLine }, margin: [3, 10, 3, 10],
     });
   }
@@ -455,7 +457,7 @@ export async function buildDeck(p: Proposal): Promise<Buffer> {
     if (scope.discountPct > 0) rows.push([{ text: `${scope.discountLabel || "Discount"} (${scope.discountPct}%)`, options: { color: C.orange } }, ...totals.map((t) => cellAmt(`–${formatUSD(t.discount)}`, false, { color: C.orange }))]);
     const firstW = hasOptions ? CW - 2.1 * cols.length : CW - 2.6;
     s.addTable(rows, {
-      x: MX, y: 2.05, w: CW, colW: [firstW, ...cols.map(() => (CW - firstW) / cols.length)], fontFace: BODY, fontSize: 10.5, valign: "middle",
+      x: MX, y: 2.05, w: CW, colW: [firstW, ...cols.map(() => (CW - firstW) / cols.length)], fontFace: UI, fontSize: 10.5, valign: "middle",
       rowH: Math.min(0.4, 3.75 / rows.length), border: { type: "solid", pt: 0.75, color: C.border }, margin: [3, 10, 3, 10],
     });
     const by = 6.15;

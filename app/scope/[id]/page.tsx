@@ -16,9 +16,9 @@ export default async function ScopePage({ params }: { params: Promise<{ id: stri
     <>
       <AppHeader />
       <div className="lg:grid lg:grid-cols-[360px_1fr]">
-        <div className="border-b border-line bg-navy/40 lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto lg:border-b-0 lg:border-r">
+        <div className="border-b border-line bg-smoke lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto lg:border-b-0 lg:border-r">
           <details className="lg:hidden">
-            <summary className="cursor-pointer px-5 py-3 text-sm font-semibold text-steel">
+            <summary className="cursor-pointer px-5 py-3 text-sm font-semibold text-slate">
               {session.snapshot.company.name} — sources & HubSpot data
             </summary>
             <SnapshotPanel s={session.snapshot} sources={session.sources} />

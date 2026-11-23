@@ -11,9 +11,9 @@ export function SnapshotPanel({ s, sources = [] }: { s: HubSpotSnapshot; sources
   return (
     <aside className="space-y-6 p-5 sm:p-6">
       <div>
-        <p className="eyebrow">{s.source === "hubspot" ? "HubSpot snapshot" : "Manual scope"}</p>
+        <p className="label text-slate">{s.source === "hubspot" ? "HubSpot snapshot" : "Manual scope"}</p>
         <h2 className="mt-2 text-2xl leading-tight">{c.name}</h2>
-        <p className="mt-1 text-sm text-steel">
+        <p className="mt-1 text-sm text-slate">
           {[c.domain, c.industry?.replace(/_/g, " ").toLowerCase(), [c.city, c.state].filter(Boolean).join(", ")]
             .filter(Boolean)
             .join("  ·  ") || "No CRM details"}
@@ -21,27 +21,27 @@ export function SnapshotPanel({ s, sources = [] }: { s: HubSpotSnapshot; sources
       </div>
 
       <div>
-        <h3 className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-steel">What the agent read</h3>
+        <h3 className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-slate">What the agent read</h3>
         <div className="flex flex-wrap gap-1.5">
           {counts
             .filter(([, c]) => c > 0)
             .map(([t, c]) => (
-              <span key={t} className="rounded-sm bg-navy-2 px-2 py-1 text-xs font-semibold">
-                <span className="text-orange">{c}</span> {t}
+              <span key={t} className="rounded-sm bg-smoke px-2 py-1 text-xs font-semibold">
+                <span className="text-orange-dark">{c}</span> {t}
                 {c === 1 ? "" : "s"}
               </span>
             ))}
           {transcripts > 0 && (
-            <span className="rounded-sm bg-navy-2 px-2 py-1 text-xs font-semibold">
-              <span className="text-orange">{transcripts}</span> full transcript{transcripts === 1 ? "" : "s"}
+            <span className="rounded-sm bg-smoke px-2 py-1 text-xs font-semibold">
+              <span className="text-orange-dark">{transcripts}</span> full transcript{transcripts === 1 ? "" : "s"}
             </span>
           )}
           {sources.map((src) => (
-            <span key={src.name} className="max-w-full truncate rounded-sm bg-navy-2 px-2 py-1 text-xs font-semibold" title={src.name}>
-              <span className="text-orange">{src.kind}</span> {src.name}
+            <span key={src.name} className="max-w-full truncate rounded-sm bg-smoke px-2 py-1 text-xs font-semibold" title={src.name}>
+              <span className="text-orange-dark">{src.kind}</span> {src.name}
             </span>
           ))}
-          {!s.engagements.length && !sources.length && <span className="text-xs text-steel">CRM fields only</span>}
+          {!s.engagements.length && !sources.length && <span className="text-xs text-slate">CRM fields only</span>}
         </div>
       </div>
 
@@ -81,12 +81,12 @@ export function SnapshotPanel({ s, sources = [] }: { s: HubSpotSnapshot; sources
             <Section title="Recent activity">
               {s.engagements.slice(0, 6).map((e) => (
                 <div key={e.id} className="flex gap-3 py-2">
-                  <span className="mt-0.5 h-fit rounded-sm bg-navy-2 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-orange">
+                  <span className="mt-0.5 h-fit rounded-sm bg-smoke px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-orange-dark">
                     {e.type}
                   </span>
                   <span className="min-w-0">
                     <span className="block truncate text-sm">{e.title || e.body?.slice(0, 60) || "(no subject)"}</span>
-                    <span className="block text-xs text-steel">{fmtDate(e.date)}</span>
+                    <span className="block text-xs text-slate">{fmtDate(e.date)}</span>
                   </span>
                 </div>
               ))}
@@ -96,7 +96,7 @@ export function SnapshotPanel({ s, sources = [] }: { s: HubSpotSnapshot; sources
       )}
 
       {s.warnings.length > 0 && (
-        <ul className="space-y-1 text-xs text-steel">
+        <ul className="space-y-1 text-xs text-slate">
           {s.warnings.map((w) => (
             <li key={w}>⚠ {w}</li>
           ))}
@@ -108,9 +108,9 @@ export function SnapshotPanel({ s, sources = [] }: { s: HubSpotSnapshot; sources
 
 function Stat({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
   return (
-    <div className="bg-navy px-4 py-3">
-      <span className={`block font-heading text-lg font-extrabold ${accent ? "text-orange" : ""}`}>{value}</span>
-      <span className="block text-[11px] uppercase tracking-wider text-steel">{label}</span>
+    <div className="bg-white px-4 py-3">
+      <span className={`block text-lg font-extrabold ${accent ? "text-orange-dark" : ""}`}>{value}</span>
+      <span className="block text-[11px] uppercase tracking-wider text-slate">{label}</span>
     </div>
   );
 }
@@ -118,7 +118,7 @@ function Stat({ label, value, accent }: { label: string; value: string; accent?:
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="mb-1 text-xs font-bold uppercase tracking-[0.16em] text-steel">{title}</h3>
+      <h3 className="mb-1 text-xs font-bold uppercase tracking-[0.16em] text-slate">{title}</h3>
       <div className="divide-y divide-line">{children}</div>
     </div>
   );
@@ -129,9 +129,9 @@ function Row({ primary, secondary, right }: { primary: string; secondary: string
     <div className="flex items-start justify-between gap-3 py-2">
       <span className="min-w-0">
         <span className="block truncate text-sm font-semibold">{primary}</span>
-        <span className="block truncate text-xs text-steel">{secondary}</span>
+        <span className="block truncate text-xs text-slate">{secondary}</span>
       </span>
-      {right && <span className="shrink-0 text-xs font-semibold text-smoke/80">{right}</span>}
+      {right && <span className="shrink-0 text-xs font-semibold text-navy">{right}</span>}
     </div>
   );
 }

@@ -104,19 +104,21 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
   let sec = 1;
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 pb-40 pt-8 sm:px-8">
+    <div className="mx-auto w-full max-w-5xl px-[18px] pb-40 pt-10 sm:px-10">
       {/* ---------- read-out ---------- */}
-      <p className="eyebrow">What the agent found · {a.deal_size} deal</p>
-      <h1 className="mt-2 text-3xl sm:text-4xl">{initial.snapshot.company.name}</h1>
-      <p className="mt-4 text-[17px] leading-relaxed text-smoke/90">{a.situation}</p>
+      <span className="label inline-block rounded-sm bg-cream px-2 py-1 text-slate">{a.deal_size} deal</span>
+      <h1 className="mt-3 text-[34px] sm:text-[44px]">
+        {initial.snapshot.company.name}, <span className="accent">in brief.</span>
+      </h1>
+      <p className="lead mt-4">{a.situation}</p>
 
       <Section title="What we've learned" n={n(sec++)}>
         <div className="space-y-3">
           {a.what_we_learned.map((w, i) => (
-            <div key={i} className="rounded-md border border-line bg-navy p-4">
-              <p className="font-semibold">{w.point}</p>
-              <p className="mt-2 border-l-2 border-orange/60 pl-3 text-sm italic text-steel">“{w.evidence}”</p>
-              <p className="mt-2 text-[11px] font-bold uppercase tracking-wider text-orange/90">{w.source}</p>
+            <div key={i} className="card p-5">
+              <p className="font-sans text-[17px] font-bold text-navy">{w.point}</p>
+              <blockquote className="mt-2 border-l-2 border-orange pl-3 text-[15px] italic text-slate">“{w.evidence}”</blockquote>
+              <p className="label mt-3 text-[11px] text-orange-dark">{w.source}</p>
             </div>
           ))}
         </div>
@@ -137,7 +139,7 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
           <ul className="space-y-2 text-sm">
             {a.pain_points.map((p, i) => (
               <li key={i}>
-                <span className="font-semibold">{p.title}</span> <span className="text-steel">— {p.detail}</span>
+                <span className="font-semibold">{p.title}</span> <span className="text-slate">— {p.detail}</span>
               </li>
             ))}
           </ul>
@@ -146,10 +148,10 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
           <ul className="space-y-2 text-sm">
             {a.stakeholders.map((p, i) => (
               <li key={i}>
-                <span className="font-semibold">{p.name}</span> <span className="text-steel">· {p.role} · {p.involvement}</span>
+                <span className="font-semibold">{p.name}</span> <span className="text-slate">· {p.role} · {p.involvement}</span>
               </li>
             ))}
-            {!a.stakeholders.length && <li className="text-steel">None identified</li>}
+            {!a.stakeholders.length && <li className="text-slate">None identified</li>}
           </ul>
         </Card>
         <Card title="Signals">
@@ -167,8 +169,8 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
           <div className="space-y-5">
             {a.open_questions.map((q, i) => (
               <div key={i}>
-                <p className="font-heading text-[17px] font-extrabold">{q.question}</p>
-                <p className="mb-2 text-sm text-steel">{q.why}</p>
+                <p className="text-[17px] font-extrabold">{q.question}</p>
+                <p className="mb-2 text-sm text-slate">{q.why}</p>
                 <SpeechInput value={answers[i] ?? ""} onChange={(v) => setAnswers((s) => ({ ...s, [i]: v }))} placeholder="Type or dictate the answer…" />
               </div>
             ))}
@@ -178,14 +180,14 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
 
       {/* ---------- scope: HubSpot implementation ---------- */}
       <Section title="HubSpot implementation — fixed scope of work" n={n(sec++)} sub={rec.approach}>
-        <p className="mb-3 text-xs text-steel">
+        <p className="mb-3 text-xs text-slate">
           One-time{scope.options.length ? ", included in every option" : ""}. Prices from your HubSpot product library
           {catalogSource === "snapshot" ? " (saved copy — HubSpot not connected)" : ""}. Custom work is priced from an internal estimate at {formatUSD(HOURLY_RATE)}/hour. Integrations and migrations are vendor-quoted: start from the agent&apos;s estimate, then enter the vendor&apos;s price and deliverables.
         </p>
         <LineItemsEditor items={impl} catalog={catalog} billing="one_time" onChange={(next) => replaceSubset("one_time", next)} />
         {impl.length > 0 && (
-          <p className="mt-3 text-right text-sm text-steel">
-            <span className="font-heading font-extrabold text-smoke">{formatUSD(implTotal)}</span> one-time, fixed price
+          <p className="mt-3 text-right text-sm text-slate">
+            <span className="font-extrabold text-navy">{formatUSD(implTotal)}</span> one-time, fixed price
           </p>
         )}
       </Section>
@@ -209,27 +211,27 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
                 key={k}
                 aria-pressed={on}
                 onClick={() => setScope((s) => ({ ...s, consulting: { ...consulting, [k]: !on } }))}
-                className={`rounded-md border p-4 text-left transition ${on ? "border-orange bg-orange/10" : "border-line bg-navy hover:border-steel"}`}
+                className={`rounded-md border p-4 text-left transition ${on ? "border-orange bg-cream" : "border-line bg-white hover:border-navy"}`}
               >
                 <span className="flex items-start justify-between gap-3">
-                  <span className="font-heading font-extrabold">{label}</span>
-                  <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-sm border text-[11px] font-bold ${on ? "border-orange bg-orange text-midnight" : "border-line text-transparent"}`}>✓</span>
+                  <span className="font-extrabold">{label}</span>
+                  <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-sm border text-[11px] font-bold ${on ? "border-orange bg-orange text-white" : "border-line text-transparent"}`}>✓</span>
                 </span>
-                <span className="mt-1 block text-sm text-steel">{desc}</span>
+                <span className="mt-1 block text-sm text-slate">{desc}</span>
               </button>
             );
           })}
         </div>
-        <p className="mt-3 text-sm text-steel">
+        <p className="mt-3 text-sm text-slate">
           {consultingName(consulting) ? (
             <>
-              <span className="font-semibold text-smoke">{consultingName(consulting)}</span> — {formatUSD(CONSULTING_MONTHLY)}/month. {consulting.rationale}
+              <span className="font-semibold text-navy">{consultingName(consulting)}</span> — {formatUSD(CONSULTING_MONTHLY)}/month. {consulting.rationale}
             </>
           ) : (
             "No consulting retainer."
           )}
         </p>
-        <h3 className="mb-3 mt-6 text-xs font-bold uppercase tracking-[0.16em] text-steel">Other monthly services</h3>
+        <h3 className="mb-3 mt-6 text-xs font-bold uppercase tracking-[0.16em] text-slate">Other monthly services</h3>
         <LineItemsEditor items={monthlyAdds} catalog={catalog} billing="monthly" onChange={(next) => replaceSubset("monthly", next)} />
       </Section>
 
@@ -238,21 +240,21 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
         <Section title="Also worth considering" n={n(sec++)} sub="High-value additions the agent would offer. They aren't in the scope unless you add them.">
           <div className="grid gap-3 sm:grid-cols-2">
             {suggestions.map((sg) => (
-              <div key={sg.key} className="flex flex-col rounded-md border border-dashed border-line bg-navy/60 p-4">
+              <div key={sg.key} className="flex flex-col rounded-md border border-dashed border-line bg-smoke p-4">
                 <div className="flex items-start justify-between gap-3">
-                  <p className="font-heading font-extrabold">{sg.name}</p>
-                  <span className="shrink-0 text-sm font-bold text-orange">
+                  <p className="font-extrabold">{sg.name}</p>
+                  <span className="shrink-0 text-sm font-bold text-orange-dark">
                     {formatUSD(lineTotal(sg))}
                     {sg.billing === "monthly" ? "/mo" : ""}
                   </span>
                 </div>
-                <p className="mt-1 flex-1 text-sm text-steel">{sg.rationale}</p>
+                <p className="mt-1 flex-1 text-sm text-slate">{sg.rationale}</p>
                 <button
                   onClick={() => {
                     setScope((s) => ({ ...s, lineItems: [...s.lineItems, { ...sg, key: newKey() }] }));
                     setSuggestions((cur) => cur.filter((x) => x.key !== sg.key));
                   }}
-                  className="mt-3 self-start rounded border border-line px-3 py-1.5 text-sm font-semibold hover:border-orange hover:text-orange"
+                  className="mt-3 self-start rounded border border-line px-3 py-1.5 text-sm font-semibold hover:border-orange hover:text-orange-dark"
                 >
                   + Add to scope
                 </button>
@@ -274,17 +276,17 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
       >
         {!scope.options.length && (
           <label className="mb-4 block max-w-xs">
-            <span className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-steel">Term (months)</span>
+            <span className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate">Term (months)</span>
             <input type="number" min={1} value={scope.termMonths} onChange={(e) => setScope({ ...scope, termMonths: Math.max(1, Number(e.target.value) || 1) })} className={inputCls} />
           </label>
         )}
         <div className="space-y-5">
           {scope.options.map((o) => (
-            <div key={o.key} className={`rounded-lg border p-5 ${o.recommended ? "border-orange" : "border-line"} bg-navy/50`}>
+            <div key={o.key} className={`rounded-lg border p-5 ${o.recommended ? "border-orange" : "border-line"} bg-smoke`}>
               <div className="grid gap-3 sm:grid-cols-[1fr_2fr_110px]">
-                <input value={o.name} onChange={(e) => setOption(o.key, { name: e.target.value })} className={`${inputCls} font-heading font-extrabold`} aria-label="Option name" />
+                <input value={o.name} onChange={(e) => setOption(o.key, { name: e.target.value })} className={`${inputCls} font-extrabold`} aria-label="Option name" />
                 <input value={o.tagline} onChange={(e) => setOption(o.key, { tagline: e.target.value })} className={inputCls} aria-label="Option tagline" />
-                <label className="flex items-center gap-2 text-sm text-steel">
+                <label className="flex items-center gap-2 text-sm text-slate">
                   <input type="number" min={1} value={o.termMonths} onChange={(e) => setOption(o.key, { termMonths: Math.max(1, Number(e.target.value) || 1) })} className={inputCls} aria-label="Term in months" />
                   mo
                 </label>
@@ -293,7 +295,7 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
                 <LineItemsEditor items={o.lineItems} catalog={catalog} onChange={(lineItems) => setOption(o.key, { lineItems })} />
               </div>
               <div className="mt-3 flex items-center gap-4 text-sm">
-                <label className="flex items-center gap-2 text-steel">
+                <label className="flex items-center gap-2 text-slate">
                   <input
                     type="checkbox"
                     checked={o.recommended}
@@ -301,7 +303,7 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
                   />
                   Recommended
                 </label>
-                <button onClick={() => setScope((s) => ({ ...s, options: s.options.filter((x) => x.key !== o.key) }))} className="ml-auto text-steel hover:text-red-300">
+                <button onClick={() => setScope((s) => ({ ...s, options: s.options.filter((x) => x.key !== o.key) }))} className="ml-auto text-slate hover:text-red-700">
                   Remove option
                 </button>
               </div>
@@ -319,7 +321,7 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
                 ],
               }))
             }
-            className="mt-4 rounded border border-dashed border-line px-4 py-2 text-sm font-semibold text-steel hover:border-steel hover:text-smoke"
+            className="mt-4 rounded border border-dashed border-line px-4 py-2 text-sm font-semibold text-slate hover:border-navy hover:text-navy"
           >
             + Add option
           </button>
@@ -329,7 +331,7 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
       {/* ---------- service points ---------- */}
       <Section title="Monthly service points" n={n(sec++)} sub={`1 point = 1 hour = ${formatUSD(POINT_PRICE)}. ${fmtPoints(pts)} points = ${formatUSD(pts * POINT_PRICE)}/month.`}>
         <div className="mb-3 flex justify-end">
-          <button onClick={() => setShowAllPoints((v) => !v)} className="text-sm font-semibold text-orange hover:underline">
+          <button onClick={() => setShowAllPoints((v) => !v)} className="text-sm font-semibold text-orange-dark hover:underline">
             {showAllPoints ? "Show selected only" : "Show the full menu"}
           </button>
         </div>
@@ -339,24 +341,24 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
             if (!items.length) return null;
             return (
               <div key={cat.key}>
-                <p className="eyebrow mb-2">{cat.eyebrow}</p>
+                <p className="label mb-2 text-slate">{cat.eyebrow}</p>
                 <div className="overflow-hidden rounded-md border border-line">
                   {items.map((item, i) => {
                     const qty = scope.points[item.id] ?? 0;
                     return (
-                      <div key={item.id} className={`flex items-center gap-4 bg-navy px-4 py-3 ${i ? "border-t border-line" : ""} ${qty ? "" : "opacity-70"}`}>
+                      <div key={item.id} className={`flex items-center gap-4 bg-white px-4 py-3 ${i ? "border-t border-line" : ""} ${qty ? "" : "opacity-70"}`}>
                         <div className="min-w-0 flex-1">
                           <p className="font-semibold">
-                            {item.name} <span className="ml-1 text-xs font-bold text-orange">{item.pointsLabel}</span>
+                            {item.name} <span className="ml-1 text-xs font-bold text-orange-dark">{item.pointsLabel}</span>
                           </p>
-                          <p className="text-sm text-steel">{recPoints.get(item.id)?.rationale ?? item.desc}</p>
+                          <p className="text-sm text-slate">{recPoints.get(item.id)?.rationale ?? item.desc}</p>
                         </div>
                         <div className="flex shrink-0 items-center gap-1">
                           <QtyBtn label={`Fewer ${item.name}`} onClick={() => setQty(item.id, Math.max(0, Math.ceil(qty) - 1))}>−</QtyBtn>
-                          <span className="w-10 text-center font-heading font-extrabold tabular-nums">{fmtPoints(qty)}</span>
+                          <span className="w-10 text-center font-extrabold tabular-nums">{fmtPoints(qty)}</span>
                           <QtyBtn label={`More ${item.name}`} onClick={() => setQty(item.id, Math.floor(qty) + 1)}>+</QtyBtn>
                         </div>
-                        <span className="hidden w-16 text-right text-sm tabular-nums text-steel sm:block">{fmtPoints(qty * item.points)} pts</span>
+                        <span className="hidden w-16 text-right text-sm tabular-nums text-slate sm:block">{fmtPoints(qty * item.points)} pts</span>
                       </div>
                     );
                   })}
@@ -364,7 +366,7 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
               </div>
             );
           })}
-          {!pts && !showAllPoints && <p className="text-sm text-steel">No service points recommended for this deal.</p>}
+          {!pts && !showAllPoints && <p className="text-sm text-slate">No service points recommended for this deal.</p>}
         </div>
       </Section>
 
@@ -392,7 +394,7 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
         <div className="mt-6 overflow-x-auto rounded-md border border-line">
           <table className="w-full min-w-[560px] text-sm">
             <thead>
-              <tr className="bg-navy-2 text-left text-[11px] uppercase tracking-wider text-steel">
+              <tr className="bg-smoke text-left text-[11px] uppercase tracking-wider text-slate">
                 <th className="px-4 py-2.5">{scope.options.length ? "Option" : "Scope"}</th>
                 <th className="px-4 py-2.5 text-right">One-time</th>
                 <th className="px-4 py-2.5 text-right">Monthly</th>
@@ -403,15 +405,15 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
             </thead>
             <tbody>
               {totals.map((t) => (
-                <tr key={t.label} className="border-t border-line bg-navy">
+                <tr key={t.label} className="border-t border-line bg-white">
                   <td className="px-4 py-3 font-semibold">{t.label}</td>
                   <td className="px-4 py-3 text-right tabular-nums">{formatUSD(t.oneTime)}</td>
                   <td className="px-4 py-3 text-right tabular-nums">{formatUSD(t.monthly)}</td>
                   <td className="px-4 py-3 text-right tabular-nums">
-                    {t.termMonths} mo <span className="text-steel">→ {formatDate(contractEnd(terms.contractStart, t.termMonths))}</span>
+                    {t.termMonths} mo <span className="text-slate">→ {formatDate(contractEnd(terms.contractStart, t.termMonths))}</span>
                   </td>
-                  <td className="px-4 py-3 text-right tabular-nums text-steel">{formatUSD(t.standard)}</td>
-                  <td className="px-4 py-3 text-right font-heading font-extrabold tabular-nums text-orange">{formatUSD(t.total)}</td>
+                  <td className="px-4 py-3 text-right tabular-nums text-slate">{formatUSD(t.standard)}</td>
+                  <td className="px-4 py-3 text-right font-extrabold tabular-nums text-orange-dark">{formatUSD(t.total)}</td>
                 </tr>
               ))}
             </tbody>
@@ -424,15 +426,15 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
       </Section>
 
       {/* ---------- sticky bar ---------- */}
-      <div className="no-print fixed inset-x-0 bottom-0 z-30 border-t border-line bg-midnight/95 backdrop-blur lg:left-[360px]">
+      <div className="no-print fixed inset-x-0 bottom-0 z-30 border-t border-line bg-white/95 backdrop-blur lg:left-[360px]">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-4 px-4 py-3 sm:px-8">
           <div>
-            <p className="font-heading text-2xl font-extrabold text-orange">
+            <p className="text-2xl font-extrabold text-orange-dark">
               {totals.length > 1
                 ? `${formatUSD(Math.min(...totals.map((t) => t.total)))} – ${formatUSD(Math.max(...totals.map((t) => t.total)))}`
                 : formatUSD(totals[0].total)}
             </p>
-            <p className="text-xs text-steel">
+            <p className="text-xs text-slate">
               {consultingName(consulting) ? `${consultingName(consulting)} · ` : ""}
               {impl.length} implementation items · {scope.options.length ? `${scope.options.length} options · ` : ""}
               {fmtPoints(pts)} pts/mo
@@ -441,19 +443,19 @@ export function ScopeReview({ initial, catalog, catalogSource }: { initial: Scop
           </div>
           <div className="ml-auto flex items-center gap-3">
             {initial.proposalId && (
-              <Link href={`/p/${initial.proposalId}`} className="text-sm text-steel hover:text-smoke">
+              <Link href={`/p/${initial.proposalId}`} className="text-sm text-slate hover:text-navy">
                 Last version →
               </Link>
             )}
             <button
               onClick={generate}
               disabled={generating}
-              className="rounded bg-orange px-5 py-3 font-heading text-sm font-extrabold text-midnight transition hover:bg-orange-hover disabled:opacity-60"
+              className="btn btn-primary"
             >
               {generating ? "Writing executive summary & deck…" : "Generate executive summary & deck →"}
             </button>
           </div>
-          {error && <p className="w-full text-sm text-red-300">{error}</p>}
+          {error && <p className="w-full text-sm text-red-700">{error}</p>}
         </div>
       </div>
     </div>
@@ -487,16 +489,16 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
     <div>
       <div className="overflow-hidden rounded-md border border-line">
         {items.map((li, i) => (
-          <div key={li.key} className={`grid gap-3 bg-navy px-4 py-3 sm:grid-cols-[1fr_auto] ${i ? "border-t border-line" : ""}`}>
+          <div key={li.key} className={`grid gap-3 bg-white px-4 py-3 sm:grid-cols-[1fr_auto] ${i ? "border-t border-line" : ""}`}>
             <div className="min-w-0">
               {li.productId ? (
                 <p className="font-semibold">{li.name}</p>
               ) : (
                 <input value={li.name} onChange={(e) => update(li.key, { name: e.target.value })} className={`${inputCls} py-1.5 font-semibold`} aria-label="Custom work name" />
               )}
-              <p className="mt-0.5 text-xs text-steel">
+              <p className="mt-0.5 text-xs text-slate">
                 <span
-                  className={`mr-2 rounded-sm px-1.5 py-0.5 font-bold uppercase ${li.vendor ? "bg-sky-400/15 text-sky-300" : li.productId ? "bg-navy-2 text-orange" : "bg-orange/15 text-orange"}`}
+                  className={`mr-2 rounded-sm px-1.5 py-0.5 font-bold uppercase ${li.vendor ? "bg-sky-100 text-sky-800" : li.productId ? "bg-smoke text-orange-dark" : "bg-cream text-orange-dark"}`}
                 >
                   {li.vendor ? "Vendor quote · starting estimate" : li.productId ? "Product" : "Custom · fixed price"}
                 </span>
@@ -504,7 +506,7 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
               </p>
               {li.vendor && (
                 <label className="mt-2 block">
-                  <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.12em] text-steel">Deliverables (one per line — update from the vendor&apos;s quote)</span>
+                  <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.12em] text-slate">Deliverables (one per line — update from the vendor&apos;s quote)</span>
                   <textarea
                     rows={Math.min(6, Math.max(3, li.description.split("\n").length))}
                     value={li.description}
@@ -518,7 +520,7 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
             <div className="flex flex-wrap items-center gap-2 text-sm sm:justify-end">
               {!billing &&
                 (li.productId ? (
-                  <span className="rounded-sm bg-navy-2 px-2 py-1 text-xs text-steel">{li.billing === "monthly" ? "Monthly" : "One-time"}</span>
+                  <span className="rounded-sm bg-smoke px-2 py-1 text-xs text-slate">{li.billing === "monthly" ? "Monthly" : "One-time"}</span>
                 ) : (
                   <select value={li.billing} onChange={(e) => update(li.key, { billing: e.target.value as LineItem["billing"] })} className={`${inputBase} w-auto py-1.5 text-sm`} aria-label="Billing">
                     <option value="one_time">One-time</option>
@@ -526,7 +528,7 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
                   </select>
                 ))}
               {li.vendor ? (
-                <label className="flex items-center gap-1 text-steel" title="Starting estimate — replace with the vendor's quote">
+                <label className="flex items-center gap-1 text-slate" title="Starting estimate — replace with the vendor's quote">
                   $
                   <input
                     type="number"
@@ -539,28 +541,28 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
                   />
                 </label>
               ) : (
-              <label className="flex items-center gap-1 text-steel">
+              <label className="flex items-center gap-1 text-slate">
                 ×
                 <input type="number" min={0} step={1} value={li.qty} onChange={(e) => update(li.key, { qty: Math.max(0, Number(e.target.value) || 0) })} className={`${inputBase} w-16 py-1.5 text-sm`} aria-label="Quantity" />
               </label>
               )}
               {li.hours != null && (
-                <label className="flex items-center gap-1 text-steel" title="Internal estimate — sets the fixed price, never shown to the client">
+                <label className="flex items-center gap-1 text-slate" title="Internal estimate — sets the fixed price, never shown to the client">
                   <input type="number" min={0} value={li.hours} onChange={(e) => update(li.key, { hours: Math.max(0, Number(e.target.value) || 0) })} className={`${inputBase} w-20 py-1.5 text-sm`} aria-label="Hours" />
                   hrs est.
                 </label>
               )}
-              <span className="w-28 text-right font-heading font-extrabold tabular-nums">
+              <span className="w-28 text-right font-extrabold tabular-nums">
                 {formatUSD(lineTotal(li))}
-                <span className="text-xs font-normal text-steel">{li.billing === "monthly" ? "/mo" : ""}</span>
+                <span className="text-xs font-normal text-slate">{li.billing === "monthly" ? "/mo" : ""}</span>
               </span>
-              <button onClick={() => onChange(items.filter((x) => x.key !== li.key))} aria-label={`Remove ${li.name}`} className="px-1 text-steel hover:text-red-300">
+              <button onClick={() => onChange(items.filter((x) => x.key !== li.key))} aria-label={`Remove ${li.name}`} className="px-1 text-slate hover:text-red-700">
                 ✕
               </button>
             </div>
           </div>
         ))}
-        {!items.length && <p className="bg-navy px-4 py-3 text-sm text-steel">No items.</p>}
+        {!items.length && <p className="bg-white px-4 py-3 text-sm text-slate">No items.</p>}
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
         <select value="" onChange={(e) => addProduct(e.target.value)} className={`${inputBase} w-auto max-w-full py-2 text-sm`} aria-label="Add a product">
@@ -579,7 +581,7 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
           onClick={() =>
             onChange([...items, { key: newKey(), productId: null, name: "Custom work", description: "", billing: billing ?? "one_time", qty: 1, unitPrice: 0, hours: 10, rationale: "" }])
           }
-          className="rounded border border-dashed border-line px-3 py-2 text-sm font-semibold text-steel hover:border-steel hover:text-smoke"
+          className="rounded border border-dashed border-line px-3 py-2 text-sm font-semibold text-slate hover:border-navy hover:text-navy"
         >
           + Custom work
         </button>
@@ -602,7 +604,7 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
                 },
               ])
             }
-            className="rounded border border-dashed border-sky-400/40 px-3 py-2 text-sm font-semibold text-sky-300 hover:border-sky-300"
+            className="rounded border border-dashed border-sky-300 bg-white px-3 py-2 text-sm font-bold text-sky-800 hover:border-sky-700"
           >
             + Vendor-quoted item (integration / migration)
           </button>
@@ -615,18 +617,17 @@ function LineItemsEditor({ items, catalog, onChange, billing }: { items: LineIte
 /* ------------------------------------------------------------------ */
 
 const inputBase =
-  "rounded-md border border-line bg-navy px-3 py-2.5 text-[15px] text-smoke placeholder:text-steel/70 focus:border-steel focus:outline-none [color-scheme:dark]";
+  "rounded-sm border border-line bg-white px-3 py-2.5 font-sans text-[15px] text-navy placeholder:text-steel focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/10";
 const inputCls = `w-full ${inputBase}`;
 
 function Section({ title, n, sub, children }: { title: string; n: string; sub?: string; children: React.ReactNode }) {
   return (
-    <section className="mt-12">
-      <div className="mb-4 flex items-center gap-3">
-        <span className="h-1 w-6 bg-orange" />
-        <span className="eyebrow">{n}</span>
-      </div>
-      <h2 className="text-2xl">{title}</h2>
-      {sub && <p className="mb-5 mt-2 max-w-3xl text-[15px] text-steel">{sub}</p>}
+    <section className="mt-14 border-t border-line pt-10">
+      <h2 className="flex items-baseline gap-3 text-[28px]">
+        <span className="num text-[22px] font-normal">{n}</span>
+        {title}
+      </h2>
+      {sub && <p className="mb-5 mt-2 max-w-3xl text-[16px] text-slate">{sub}</p>}
       <div className={sub ? "" : "mt-5"}>{children}</div>
     </section>
   );
@@ -634,8 +635,8 @@ function Section({ title, n, sub, children }: { title: string; n: string; sub?: 
 
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-md border border-line bg-navy p-5">
-      <h3 className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-steel">{title}</h3>
+    <div className="card card-rule p-5 pt-6">
+      <h3 className="mb-3 text-[17px]">{title}</h3>
       {children}
     </div>
   );
@@ -644,15 +645,15 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
 function Signal({ k, v }: { k: string; v: string }) {
   return (
     <div>
-      <dt className="text-[11px] font-bold uppercase tracking-wider text-orange">{k}</dt>
-      <dd className="text-smoke/90">{v}</dd>
+      <dt className="label text-[11px] text-slate">{k}</dt>
+      <dd className="text-navy">{v}</dd>
     </div>
   );
 }
 
 function QtyBtn({ children, onClick, label }: { children: React.ReactNode; onClick: () => void; label: string }) {
   return (
-    <button onClick={onClick} aria-label={label} className="grid h-8 w-8 place-items-center rounded border border-line bg-navy-2 font-bold text-smoke transition hover:border-orange">
+    <button onClick={onClick} aria-label={label} className="grid h-8 w-8 place-items-center rounded border border-line bg-smoke font-bold text-navy transition hover:border-orange">
       {children}
     </button>
   );
@@ -661,7 +662,7 @@ function QtyBtn({ children, onClick, label }: { children: React.ReactNode; onCli
 function Field({ label, children, wide }: { label: string; children: React.ReactNode; wide?: boolean }) {
   return (
     <label className={`block ${wide ? "sm:col-span-2" : ""}`}>
-      <span className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-steel">{label}</span>
+      <span className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-slate">{label}</span>
       {children}
     </label>
   );

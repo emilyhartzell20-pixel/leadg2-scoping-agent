@@ -5,13 +5,16 @@ export default function NotFound() {
   return (
     <>
       <AppHeader />
-      <main className="mx-auto max-w-xl px-4 py-24 text-center">
-        <p className="eyebrow">404</p>
-        <h1 className="mt-3 text-4xl">Not found</h1>
-        <p className="mt-3 text-steel">That session or proposal doesn&apos;t exist (or has expired).</p>
-        <Link href="/" className="mt-8 inline-block rounded bg-orange px-5 py-3 font-heading text-sm font-extrabold text-midnight">
-          Start a new scope
-        </Link>
+      <main className="bg-cream">
+        <div className="mx-auto max-w-read px-[18px] py-28 text-center">
+          <h1 className="text-[40px]">
+            That page <span className="accent">isn&apos;t here.</span>
+          </h1>
+          <p className="lead mt-4">The session or proposal doesn&apos;t exist, or it has expired.</p>
+          <Link href="/" className="btn btn-primary mt-8">
+            Start a new scope →
+          </Link>
+        </div>
       </main>
     </>
   );

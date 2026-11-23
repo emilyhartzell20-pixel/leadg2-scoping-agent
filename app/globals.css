@@ -2,50 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+/* LeadG2 brand system v1.1 */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html,
 body {
-  background: #0d1b2a;
-  color: #f7f7f5;
+  background: #ffffff;
+  color: #1b263b;
+  font-family: "Mulish", Arial, sans-serif;
 }
 
-h1, h2, h3, h4, .font-heading {
-  font-family: "Mulish", system-ui, sans-serif;
+/* Mulish 800 for headlines, tight tracking, sentence case */
+h1, h2, h3, h4 {
+  font-family: "Mulish", Arial, sans-serif;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  color: inherit;
+}
+h1 { letter-spacing: -0.015em; line-height: 1.05; }
+h2 { letter-spacing: -0.01em; line-height: 1.15; }
+h3 { line-height: 1.25; }
+
+/* Lora for reading: paragraphs, list copy, descriptions */
+p, li, dd, blockquote {
+  font-family: "Lora", Georgia, serif;
+  line-height: 1.6;
 }
 
-/* Orange accent bar along the bottom of dark sections */
-.accent-bar {
-  position: relative;
-}
-.accent-bar::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 6px;
-  background: #e17226;
-}
-
-.eyebrow {
-  font-family: "Mulish", system-ui, sans-serif;
-  font-weight: 800;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #e17226;
-}
-
-/* angular grid texture for dark heroes */
-.grid-texture {
-  background-image: linear-gradient(rgba(136, 146, 160, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(136, 146, 160, 0.07) 1px, transparent 1px);
-  background-size: 48px 48px;
+@layer components {
+  /* Headline accent: Lora italic in Orange */
+  .accent { font-family: "Lora", Georgia, serif; font-style: italic; font-weight: 500; color: #e17226; }
+  /* Label: Mulish 700, 12–13px, +1.4px caps (badges, tags, table heads — never above headlines) */
+  .label { font-family: "Mulish", Arial, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; }
+  .lead { font-family: "Lora", Georgia, serif; font-size: 19px; line-height: 1.6; color: #50606d; }
+  /* Buttons: flat orange, radius 6, no shadow, Mulish 700 */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .4em; border-radius: 6px; padding: 12px 22px; font-family: "Mulish", Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.2; transition: background-color .15s, color .15s, border-color .15s; }
+  .btn-primary { background: #e17226; color: #fff; }
+  .btn-primary:hover { background: #c2611c; }
+  .btn-primary:disabled { opacity: .5; cursor: not-allowed; }
+  .btn-secondary { background: #fff; color: #1b263b; border: 1px solid #e0e1dd; }
+  .btn-secondary:hover { border-color: #1b263b; }
+  .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); } /* Midnight only */
+  .btn-ghost:hover { border-color: #fff; }
+  .btn-sm { padding: 8px 14px; font-size: 14px; }
+  /* Feature card: White, Line border, orange rule, Lora italic number */
+  .card { background: #fff; border: 1px solid #e0e1dd; border-radius: 12px; }
+  .card-rule { position: relative; }
+  .card-rule::before { content: ""; position: absolute; left: 24px; top: 0; width: 36px; height: 3px; background: #e17226; border-radius: 0 0 2px 2px; }
+  .num { font-family: "Lora", Georgia, serif; font-style: italic; color: #e17226; }
+  /* Bottom line: dashed callout for the one takeaway */
+  .bottom-line { border: 1.5px dashed #e17226; border-radius: 12px; background: #fff; }
+  .link { color: #c2611c; font-weight: 700; }
+  .link:hover { text-decoration: underline; }
+  .field { width: 100%; border: 1px solid #e0e1dd; border-radius: 6px; background: #fff; color: #1b263b; padding: 10px 12px; font-family: "Mulish", Arial, sans-serif; font-size: 15px; }
+  .field:focus { outline: none; border-color: #1b263b; box-shadow: 0 0 0 3px rgba(27,38,59,.08); }
+  .field::placeholder { color: #9da6b5; }
 }
 
 @keyframes rise {
@@ -62,7 +74,7 @@ h1, h2, h3, h4, .font-heading {
 .thinking-bar span:nth-child(2) { animation-delay: 0.15s; }
 .thinking-bar span:nth-child(3) { animation-delay: 0.3s; }
 
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 @media print {

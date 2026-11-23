@@ -1,5 +1,6 @@
 import "server-only";
 import { Client } from "@hubspot/api-client";
+import { hubspotMessage } from "./hubspotErrors";
 import type {
   CompanyMatch,
   EmailStats,
@@ -399,6 +400,7 @@ export function manualSnapshot(name: string): HubSpotSnapshot {
 }
 
 function errMsg(e: unknown) {
-  if (e && typeof e === "object" && "code" in e) return `HubSpot ${String((e as { code: unknown }).code)}`;
-  return e instanceof Error ? e.message : "unknown error";
+  const hs = hubspotMessage(e);
+  if (hs) return hs.status === 403 ? `missing HubSpot permission — ${hs.message.split(": ")[1]?.split(".")[0] ?? "check scopes"}` : hs.message;
+  return e instanceof Error ? e.message.split("\n")[0].slice(0, 200) : "unknown error";
 }

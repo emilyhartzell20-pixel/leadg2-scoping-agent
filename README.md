@@ -19,15 +19,19 @@ Reads everything about a prospect, recommends the best-fit LeadG2 scope in **ser
 - The agent recommends the strongest scope for each side and suggests 2-4 optional add-ons ("Also worth considering") you can add with one click.
 - Everything is editable on the review screen: add/remove products, custom work, quantities, options, discount, contract start and HubSpot licensing.
 
-## Logo
-Only the official LeadG2 logo files from the LeadG2 Design System are used: `public/brand/logo-white.png` on dark web UI, `logo-color.png` on dark slides, `logo-color-tagline.png` on light slides.
+## Brand
+Built to the LeadG2 brand guide v1.1 (leadg2.thecenterforsalesstrategy.com/leadg2-brand-guide):
+- **Type:** Mulish 800 headlines and 700 UI/labels; Lora for body copy, leads and accents (headline accents in Lora italic). Both load from Google Fonts.
+- **Color:** Navy `#1B263B`, Midnight `#0D1B2A`, Cream `#F7F3EE`, Smoke `#F4F4F4`, Line `#E0E1DD`, Slate `#50606D`, Mist `#AEB6C4`, Steel `#9DA6B5`; Orange `#E17226` only for actions and accents, Orange Dark `#C2611C` for links and hover, Light Orange `#F2913F` only on Midnight. Tokens in `tailwind.config.ts`, components in `app/globals.css`.
+- **Pages:** cream hero → alternating White/Smoke sections → Midnight closing panel (radius 22, no glow or gradient). Flat orange buttons, radius 6, no shadow. Feature cards with an orange rule and Lora-italic numbers; Midnight emphasis card for the option we recommend; dashed "bottom line" callout. No eyebrow labels above headlines.
+- **Logo:** official files only. `logo-color.png` on light; `logo-on-dark.png` on Navy/Midnight (the official file with G2 in Steel, per the guide's primary lockup); `logo-color-tagline.png` on light slides.
 
 ## Deck (13–16 slides)
 Cover · Agenda · What we heard from your team · What's holding growth back · Before/After · Where we're going · How we'll get you there · Here's what we recommend · *Choose your level of support (if options)* · *Monthly service points plan (if points)* · Roadmap (Gantt) · Your LeadG2 team · Where the investment goes · *Open questions (if any)* · Let's get started · Thank you.
 
 `sample-output-enterprise.pptx` and `sample-output-retainer.pptx` show both shapes.
 
-Styled after the BridgeTower and Hubbard decks: their navy glow backgrounds (`assets/deck/`), the official logo files, Montserrat titles, Inter body, Lora italics, `#0D1B2A` / `#16243A` / `#E17226` / `#F2913F`. As with those decks, fonts aren't embedded — the viewer's machine needs Montserrat, Inter and Lora installed (free on Google Fonts) or PowerPoint will substitute.
+Styled after the BridgeTower and Hubbard decks (navy glow backgrounds in `assets/deck/`, official logo files) and set in the brand fonts: Mulish for titles and labels, Lora for body and italic accents. Fonts aren't embedded — the viewer's machine needs Mulish and Lora installed (free on Google Fonts) or PowerPoint will substitute.
 
 ## Setup
 ```bash
@@ -45,7 +49,7 @@ See `.env.example` for `ANTHROPIC_API_KEY`, `HUBSPOT_ACCESS_TOKEN` (private app 
 | Variable | What to enter |
 |---|---|
 | `ANTHROPIC_API_KEY` | Claude API key (console.anthropic.com) |
-| `HUBSPOT_ACCESS_TOKEN` | HubSpot private app token — scopes: `crm.objects.companies.read`, `crm.objects.contacts.read`, `crm.objects.deals.read`, `sales-email-read`, `e-commerce` (Products) |
+| `HUBSPOT_ACCESS_TOKEN` | HubSpot private app token. Scopes: `crm.objects.companies.read`, `crm.objects.contacts.read`, `crm.objects.deals.read`, `sales-email-read`, `e-commerce` (Products). If one is missing, the app names it in the error. |
 | `APP_PASSWORD` | Password for the internal tool (username `leadg2`). Proposal share links stay public. |
 | `LEADG2_CONTACT_NAME` / `_TITLE` / `_EMAIL` / `_PHONE` | Presenter shown on the deck and summary |
 

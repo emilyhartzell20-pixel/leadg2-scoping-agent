@@ -12,53 +12,51 @@ export default async function Home() {
     <>
       <AppHeader />
       <main>
-        <section className="accent-bar grid-texture border-b border-line">
-          <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-20 pt-16 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:pt-24">
+        {/* Cream hero */}
+        <section className="bg-cream">
+          <div className="mx-auto grid max-w-page gap-12 px-[18px] pb-24 pt-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:pt-28">
             <div>
-              <p className="eyebrow">Solutions Consultant</p>
-              <h1 className="mt-4 text-4xl leading-[1.05] sm:text-6xl">
-                Scope it right.
-                <br />
-                <span className="text-orange">Propose it fast.</span>
+              <h1 className="text-[40px] sm:text-[58px]">
+                Scope it right. <span className="accent">Propose it fast.</span>
               </h1>
-              <p className="mt-6 max-w-xl text-lg text-steel">
-                Pull a client&apos;s HubSpot history, run a sharp discovery conversation, and walk away with a branded
-                proposal page and a 9-slide deck.
+              <p className="lead mt-6 max-w-xl">
+                Pull a prospect&apos;s HubSpot history, let the agent read every call and email, and walk away with a scope, an executive summary and a
+                deck.
               </p>
-              <div className="mt-10 grid max-w-xl grid-cols-3 gap-px overflow-hidden rounded-md border border-line bg-line">
+              <ol className="mt-10 grid max-w-xl gap-3 sm:grid-cols-3">
                 {[
-                  ["01", "HubSpot pull"],
-                  ["02", "Guided scoping"],
-                  ["03", "Proposal + deck"],
+                  ["01", "Read everything"],
+                  ["02", "Review the scope"],
+                  ["03", "Summary and deck"],
                 ].map(([n, t]) => (
-                  <div key={n} className="bg-midnight px-4 py-4">
-                    <span className="font-heading text-sm font-extrabold text-orange">{n}</span>
-                    <span className="mt-1 block text-sm font-semibold">{t}</span>
-                  </div>
+                  <li key={n} className="card card-rule px-5 pb-4 pt-5">
+                    <span className="num text-lg">{n}</span>
+                    <span className="mt-1 block font-sans text-[15px] font-bold text-navy">{t}</span>
+                  </li>
                 ))}
-              </div>
+              </ol>
             </div>
-            <div className="lg:pt-6">
-              <div className="rounded-lg border border-line bg-midnight/80 p-6 shadow-2xl shadow-black/30 sm:p-8">
-                <p className="eyebrow">Start a new scope</p>
-                <h2 className="mb-5 mt-2 text-2xl">Who are we scoping?</h2>
+            <div className="lg:pt-2">
+              <div className="card p-6 shadow-[0_34px_64px_-36px_rgba(13,27,42,.32)] sm:p-8">
+                <h2 className="mb-5 text-[28px]">
+                  Who are we <span className="accent">scoping?</span>
+                </h2>
                 <StartScoping />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-          <div className="mb-5 flex items-end justify-between">
-            <div>
-              <p className="eyebrow">Saved</p>
-              <h2 className="mt-1 text-2xl">Recent proposals</h2>
+        <section className="bg-white">
+          <div className="mx-auto max-w-page px-[18px] py-16 sm:px-8">
+            <div className="mb-6 flex items-end justify-between gap-4">
+              <h2 className="text-[30px]">Recent proposals</h2>
+              <Link href="/proposals" className="link text-[15px]">
+                View all →
+              </Link>
             </div>
-            <Link href="/proposals" className="text-sm text-steel hover:text-orange">
-              View all →
-            </Link>
+            <ProposalList items={recent} />
           </div>
-          <ProposalList items={recent} />
         </section>
       </main>
     </>
