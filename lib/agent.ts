@@ -19,7 +19,28 @@ const MODEL = "claude-opus-5-5";
 // Server-side refusal fallback: if the primary model declines, the API re-runs the request on a fallback model.
 const FALLBACK_BETA = "server-side-fallback-2026-07-01";
 
-const anthropic = new Anthropic();
+/** The API key as set on the server, tolerating stray quotes/whitespace pasted into a dashboard. */
+function apiKey(): string | undefined {
+  const raw = process.env.ANTHROPIC_API_KEY?.trim().replace(/^["']|["']$/g, "").trim();
+  return raw || undefined;
+}
+export const claudeConfigured = () => Boolean(apiKey() || process.env.ANTHROPIC_AUTH_TOKEN);
+
+export function assertClaudeConfigured() {
+  if (!claudeConfigured()) {
+    throw new AgentError(
+      "The server has no Claude API key. Add ANTHROPIC_API_KEY (from console.anthropic.com → API Keys) to the service's environment, then redeploy — in Render: Environment → add the variable → Save, rebuild, and deploy.",
+      500
+    );
+  }
+}
+
+let client: Anthropic | null = null;
+function anthropicClient() {
+  assertClaudeConfigured();
+  if (!client) client = new Anthropic(apiKey() ? { apiKey: apiKey() } : {});
+  return client;
+}
 
 export class AgentError extends Error {
   constructor(message: string, public status = 500) {
@@ -29,7 +50,9 @@ export class AgentError extends Error {
 
 function handleApiError(err: unknown): never {
   if (err instanceof AgentError) throw err;
-  if (err instanceof Anthropic.AuthenticationError) throw new AgentError("Anthropic API key is missing or invalid.", 500);
+  if (err instanceof Anthropic.AuthenticationError)
+    throw new AgentError("Claude rejected the API key. Check ANTHROPIC_API_KEY on the server (no quotes or spaces), then redeploy.", 500);
+  if (err instanceof Anthropic.PermissionDeniedError) throw new AgentError("This Claude API key doesn't have access to the model. Check the key's workspace in console.anthropic.com.", 500);
   if (err instanceof Anthropic.RateLimitError) throw new AgentError("Claude is rate limited — try again in a moment.", 429);
   if (err instanceof Anthropic.BadRequestError) throw new AgentError(`Claude request rejected: ${err.message}`, 400);
   if (err instanceof Anthropic.APIError) throw new AgentError(`Claude API error (${err.status}): ${err.message}`, 502);
@@ -44,7 +67,7 @@ async function structured<S extends z.ZodType>(opts: {
   effort: "medium" | "high" | "xhigh";
 }): Promise<z.infer<S>> {
   try {
-    const stream = anthropic.beta.messages.stream({
+    const stream = anthropicClient().beta.messages.stream({
       model: MODEL,
       max_tokens: 64000,
       system: opts.system,

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { nanoid } from "nanoid";
 import { getCompanySnapshot, manualSnapshot } from "@/lib/hubspot";
-import { analyzeProspect, scopeFromRecommendation, suggestionsFromRecommendation } from "@/lib/agent";
+import { analyzeProspect, assertClaudeConfigured, scopeFromRecommendation, suggestionsFromRecommendation } from "@/lib/agent";
 import { getCatalog } from "@/lib/products";
 import { saveSession } from "@/lib/storage";
 import { errorResponse } from "@/lib/http";
@@ -22,6 +22,7 @@ export async function POST(req: NextRequest) {
     if (!body.companyId && !body.companyName?.trim()) {
       return NextResponse.json({ error: "Provide companyId or companyName" }, { status: 400 });
     }
+    assertClaudeConfigured(); // fail fast, before spending minutes pulling HubSpot
     const sources = (body.sources ?? []).filter((s) => s?.data && (s.kind === "text" || s.kind === "pdf"));
     const notes = body.notes ?? "";
     if (!body.companyId && !sources.length && !notes.trim()) {
